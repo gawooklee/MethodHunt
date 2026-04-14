@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressFill = document.getElementById('progress-fill');
     const progressText = document.getElementById('quiz-progress-text');
     
+    const scenarioEl = document.getElementById('scenario');
     const sentenceEl = document.getElementById('sentence');
     const translationEl = document.getElementById('translation');
     const logicBeforeQ = document.getElementById('logic-before-q');
@@ -67,13 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Reset UI
         hintBox.classList.add('hidden');
-        sentenceEl.textContent = entry.quiz.sentence;
-        translationEl.textContent = entry.quiz.translation;
-        hintText.textContent = entry.quiz.hint;
+        
+        // Show the 3-level comprehensive metadata
+        scenarioEl.textContent = entry.scenario;
+        sentenceEl.textContent = entry.quiz_sentence;
+        translationEl.textContent = entry.question;
+        hintText.textContent = entry.hint;
         
         // Update Logic Header
-        logicBeforeQ.textContent = entry.logic.before;
-        logicAfterQ.textContent = entry.logic.after;
+        logicBeforeQ.textContent = entry.delta.before;
+        logicAfterQ.textContent = entry.delta.after;
         
         // Progress UI
         const progressPercent = ((currentIndex + 1) / currentSet.length) * 100;
@@ -81,20 +85,20 @@ document.addEventListener('DOMContentLoaded', () => {
         progressText.textContent = `${currentIndex + 1} / ${currentSet.length}`;
         
         // Generate Distractors
-        const options = generateOptions(entry.method);
+        const options = generateOptions(entry.correct_method);
         optionsGrid.innerHTML = '';
         options.forEach(opt => {
             const btn = document.createElement('button');
             btn.className = 'option-btn';
             btn.textContent = opt;
-            btn.onclick = () => handleAnswer(opt === entry.method);
+            btn.onclick = () => handleAnswer(opt === entry.correct_method);
             optionsGrid.appendChild(btn);
         });
     }
 
     function generateOptions(correct) {
         const others = allEntries
-            .map(e => e.method)
+            .map(e => e.correct_method)
             .filter(m => m !== correct);
         
         // Unique options
@@ -123,9 +127,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         reviewIpa.textContent = entry.ipa;
         reviewPron.textContent = entry.pronunciation;
-        logicBefore.textContent = entry.logic.before;
-        logicAfter.textContent = entry.logic.after;
-        logicDesc.textContent = entry.logic.description;
+        logicBefore.textContent = entry.delta.before;
+        logicAfter.textContent = entry.delta.after;
+        
+        // Use logic_description for the feedback logic desc
+        const completedSentence = entry.quiz_sentence.replace('_____', `[${entry.correct_method}]`).replace('______', `[${entry.correct_method}]`);
+        logicDesc.innerHTML = `<p class="completed-sentence">"${completedSentence}"</p><hr>${entry.logic_description}`;
         
         feedbackOverlay.classList.remove('hidden');
     }

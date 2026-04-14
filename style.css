@@ -214,14 +214,41 @@ h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
     border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
-.sentence-text {
-    font-size: 22px;
-    line-height: 1.4;
-    font-weight: 400;
-    margin-bottom: 12px;
+.quest-log {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    border-left: 3px solid var(--primary);
 }
 
-.translation-text { color: var(--text-dim); font-size: 15px; font-weight: 300; }
+.scenario-text {
+    font-size: 14px;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.question-text {
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.sentence-box {
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sentence-text {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: var(--text-main);
+    letter-spacing: -0.2px;
+}
 
 .hint-box {
     margin-top: 20px;
