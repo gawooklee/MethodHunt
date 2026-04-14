@@ -1,0 +1,690 @@
+[
+  {
+    "id": 21,
+    "method": "tie",
+    "ipa": "/taɪ/",
+    "pronunciation": "타이",
+    "logic": {
+      "before": "Two independent data points (Self-worth, Money)",
+      "after": "Strong dependency created (Linked together)",
+      "description": "독립된 두 데이터를 하나로 묶어 종속성을 만드는 로직"
+    },
+    "quiz": {
+      "sentence": "Don't ____ your self-worth to your bank account.",
+      "translation": "네 자아 가치를 통장 잔고에 묶지 마.",
+      "hint": "Think about a necktie or a knot."
+    }
+  },
+  {
+    "id": 22,
+    "method": "equate",
+    "ipa": "/ɪˈkweɪt/",
+    "pronunciation": "이퀘이트",
+    "logic": {
+      "before": "A person and money are different objects",
+      "after": "A person == Money (Identical value)",
+      "description": "서로 다른 객체를 동일한 가치로 치환하는 로직"
+    },
+    "quiz": {
+      "sentence": "We often ______ a person with their bank account.",
+      "translation": "우리는 종종 사람을 그들의 통장 잔고와 동일시하곤 해.",
+      "hint": "Derived from 'Equal' or 'Equation'."
+    }
+  },
+  {
+    "id": 25,
+    "method": "breathe",
+    "ipa": "/briːð/",
+    "pronunciation": "브리드",
+    "logic": {
+      "before": "Closed system, high pressure (Suppressed feelings)",
+      "after": "Open air, pressure released (Ventilation)",
+      "description": "갇힌 시스템을 열어 환기시키고 숨을 쉬게 하는 로직"
+    },
+    "quiz": {
+      "sentence": "Maybe let that feeling _______ a little.",
+      "translation": "그 감정이 조금은 숨을 쉬게 해줘.",
+      "hint": "Taking air into lungs."
+    }
+  },
+  {
+    "id": 11,
+    "method": "nod",
+    "ipa": "/nɒd/",
+    "pronunciation": "나드",
+    "logic": {
+      "before": "Silent or neutral posture",
+      "after": "Moving head to show polite agreement or acknowledgment",
+      "description": "상대방의 말에 예의상 혹은 긍정의 의미로 고개를 끄덕이는 로직 [cite: 7]"
+    },
+    "quiz": {
+      "sentence": "The kind of topic where people ___ politely...",
+      "translation": "사람들이 예의 바르게 고개를 끄덕이는 종류의 주제...",
+      "hint": "To move your head up and down."
+    }
+  },
+  {
+    "id": 12,
+    "method": "deserve",
+    "ipa": "/dɪˈzɜːrv/",
+    "pronunciation": "디저브",
+    "logic": {
+      "before": "Neutral status of a person",
+      "after": "Qualified or entitled to receive respect/reward",
+      "description": "특정 보상이나 존중을 받을 자격이 생기는 로직 [cite: 14]"
+    },
+    "quiz": {
+      "sentence": "Proof that you _______ respect.",
+      "translation": "당신이 존중받을 자격이 있다는 증거.",
+      "hint": "To be worthy of something."
+    }
+  },
+  {
+    "id": 13,
+    "method": "doubt",
+    "ipa": "/daʊt/",
+    "pronunciation": "다우트",
+    "logic": {
+      "before": "Confidence in oneself (True/100%)",
+      "after": "Uncertainty or lack of trust in oneself (False/40%)",
+      "description": "자기 자신에 대해 의심하거나 확신을 잃는 로직 [cite: 27, 155]"
+    },
+    "quiz": {
+      "sentence": "Why do I start ________ myself when life is not looking impressive?",
+      "translation": "생활이 겉보기에 인상적이지 않을 때 왜 나 자신을 의심하기 시작할까? [cite: 27]",
+      "hint": "To feel uncertain about something."
+    }
+  },
+  {
+    "id": 14,
+    "method": "reflect",
+    "ipa": "/rɪˈflekt/",
+    "pronunciation": "리플렉트",
+    "logic": {
+      "before": "Quick or surface-level listening",
+      "after": "Deep thinking and looking back at the meaning",
+      "description": "들은 내용을 깊이 되새기거나 반추하는 로직 [cite: 39]"
+    },
+    "quiz": {
+      "sentence": "It's there for you if you'd like to _______ more deeply.",
+      "translation": "더 깊이 되새겨보고 싶다면 당신을 위해 준비되어 있습니다. [cite: 39]",
+      "hint": "To think carefully about something."
+    }
+  },
+  {
+    "id": 15,
+    "method": "explore",
+    "ipa": "/ɪkˈsplɔːr/",
+    "pronunciation": "익스플로어",
+    "logic": {
+      "before": "Unknown or hidden words/ideas",
+      "after": "Investigated and understood details",
+      "description": "새로운 단어나 아이디어를 구석구석 탐구하는 로직 [cite: 44, 239]"
+    },
+    "quiz": {
+      "sentence": "We'll also _______ some powerful words and expressions.",
+      "translation": "우리는 또한 몇 가지 강력한 단어와 표현들을 탐구해 볼 것입니다. [cite: 44]",
+      "hint": "To search and discover about something."
+    }
+  },
+  {
+    "id": 16,
+    "method": "survive",
+    "ipa": "/sərˈvaɪv/",
+    "pronunciation": "서바이브",
+    "logic": {
+      "before": "Dying or failing in a hard situation",
+      "after": "Continuing to exist or live through a struggle",
+      "description": "힘든 상황 속에서도 어떻게든 살아남는 로직 [cite: 65]"
+    },
+    "quiz": {
+      "sentence": "One day you're just trying to _______.",
+      "translation": "어느 날 당신은 그저 살아남으려고 노력하고 있을 뿐입니다. [cite: 65]",
+      "hint": "To continue to live or exist."
+    }
+  },
+  {
+    "id": 17,
+    "method": "launch",
+    "ipa": "/lɔːntʃ/",
+    "pronunciation": "론치",
+    "logic": {
+      "before": "Business idea is only on paper (Not running)",
+      "after": "Business is started and active in the market",
+      "description": "새로운 사업이나 프로젝트를 시작/출시하는 로직 [cite: 66]"
+    },
+    "quiz": {
+      "sentence": "Someone your age bought a house, ________ a business.",
+      "translation": "당신 또래 누군가는 집을 사고, 사업을 시작했습니다. [cite: 66]",
+      "hint": "To start a new activity or enterprise."
+    }
+  },
+  {
+    "id": 18,
+    "method": "judge",
+    "ipa": "/dʒʌdʒ/",
+    "pronunciation": "저지",
+    "logic": {
+      "before": "Neutral observation of a person",
+      "after": "Forming an opinion or evaluation (often superficial)",
+      "description": "겉모습만 보고 타인이나 자신을 판단하는 로직 [cite: 110, 152, 327]"
+    },
+    "quiz": {
+      "sentence": "It's like _______ a whole life by the cover.",
+      "translation": "그것은 겉표지만 보고 인생 전체를 판단하는 것과 같습니다. [cite: 110]",
+      "hint": "To form an opinion about someone."
+    }
+  },
+  {
+    "id": 19,
+    "method": "admire",
+    "ipa": "/ədˈmaɪər/",
+    "pronunciation": "어드마이어",
+    "logic": {
+      "before": "Neutral feeling toward wealth",
+      "after": "Feeling respect and approval for someone's wealth",
+      "description": "부나 성공을 높게 평가하며 감탄하거나 존경하는 로직 [cite: 124]"
+    },
+    "quiz": {
+      "sentence": "A lot of people don't just ______ wealth. They trust it.",
+      "translation": "많은 사람은 부를 단순히 동경하는 것이 아니라, 신뢰합니다. [cite: 124]",
+      "hint": "To respect and approve of someone."
+    }
+  },
+  {
+    "id": 20,
+    "method": "assume",
+    "ipa": "/əˈsuːm/",
+    "pronunciation": "어슘",
+    "logic": {
+      "before": "No information about competence",
+      "after": "Believing they have competence without proof",
+      "description": "증거 없이 당연히 그럴 것이라고 가정/추정하는 로직 [cite: 135]"
+    },
+    "quiz": {
+      "sentence": "People also start ________ they must have more competence.",
+      "translation": "사람들은 또한 그들이 더 많은 능력을 갖추었을 것이라고 가정하기 시작합니다. [cite: 135]",
+      "hint": "To think that something is true without proof."
+    }
+  },
+  {
+    "id": 21,
+    "method": "absorb",
+    "ipa": "/əbˈzɔːrb/",
+    "pronunciation": "어브조브",
+    "logic": {
+      "before": "The message is outside of the person",
+      "after": "The message is taken in and becomes part of their mind",
+      "description": "외부의 메시지를 마음속으로 빨아들여 흡수하는 로직 [cite: 148]"
+    },
+    "quiz": {
+      "sentence": "People start _________ that message.",
+      "translation": "사람들은 그 메시지를 흡수하기 시작합니다. [cite: 148]",
+      "hint": "To take in or soak up something."
+    }
+  },
+  {
+    "id": 22,
+    "method": "damage",
+    "ipa": "/ˈdæmɪdʒ/",
+    "pronunciation": "대미지",
+    "logic": {
+      "before": "Self-perception is healthy and intact",
+      "after": "Self-perception is harmed or broken",
+      "description": "자아 인식이나 마음에 손상을 입히는 로직 [cite: 151, 279]"
+    },
+    "quiz": {
+      "sentence": "That can slowly ______ a person's self-perception.",
+      "translation": "그것은 천천히 한 사람의 자아 인식을 손상시킬 수 있습니다. [cite: 151]",
+      "hint": "To harm or spoil something."
+    }
+  },
+  {
+    "id": 23,
+    "method": "undervalue",
+    "ipa": "/ˌʌndərˈvæljuː/",
+    "pronunciation": "언더밸류",
+    "logic": {
+      "before": "Effort is high (100%)",
+      "after": "Appreciation is low (20%)",
+      "description": "가치를 실제보다 낮게 평가하거나 과소평가하는 로직 [cite: 171, 286]"
+    },
+    "quiz": {
+      "sentence": "So many of them feel __________.",
+      "translation": "그들 중 아주 많은 이들이 저평가되고 있다고 느낍니다. [cite: 170]",
+      "hint": "To not appreciate someone enough."
+    }
+  },
+  {
+    "id": 24,
+    "method": "perform",
+    "ipa": "/pərˈfɔːrm/",
+    "pronunciation": "퍼포옴",
+    "logic": {
+      "before": "Money is just a private asset",
+      "after": "Money is shown off to others like a show",
+      "description": "돈이나 성공을 남에게 보여주기 위해 연출/수행하는 로직 [cite: 197]"
+    },
+    "quiz": {
+      "sentence": "People don't just see money now. They see money ________.",
+      "translation": "사람들은 이제 단순히 돈을 보는 것이 아니라, 연출된 돈을 봅니다. [cite: 197]",
+      "hint": "To carry out a task or a show."
+    }
+  },
+  {
+    "id": 25,
+    "method": "distort",
+    "ipa": "/dɪˈstɔːrt/",
+    "pronunciation": "디스토트",
+    "logic": {
+      "before": "Definition of success is straight/true",
+      "after": "Definition is twisted/unhealthy",
+      "description": "성공의 정의를 비정상적으로 비틀거나 왜곡하는 로직 [cite: 204, 205]"
+    },
+    "quiz": {
+      "sentence": "Maybe we're living with a ________ definition of success.",
+      "translation": "어쩌면 우리는 왜곡된 성공의 정의를 가지고 살고 있는지도 모릅니다. [cite: 204]",
+      "hint": "To change something so that it is false or unnatural."
+    }
+  },
+  {
+    "id": 26,
+    "method": "deny",
+    "ipa": "/dɪˈnaɪ/",
+    "pronunciation": "디나이",
+    "logic": {
+      "before": "A fact exists (Money matters)",
+      "after": "Refusing to accept the fact",
+      "description": "사실을 부정하거나 인정하지 않는 로직 [cite: 208]"
+    },
+    "quiz": {
+      "sentence": "No one is _______ that.",
+      "translation": "아무도 그것을 부정하지 않습니다. [cite: 208]",
+      "hint": "To say that something is not true."
+    }
+  },
+  {
+    "id": 27,
+    "method": "chase",
+    "ipa": "/tʃeɪs/",
+    "pronunciation": "체이스",
+    "logic": {
+      "before": "Walking or staying (No clear goal)",
+      "after": "Running after titles/salaries (Hard target)",
+      "description": "타이틀이나 연봉을 맹목적으로 쫓아가는 로직 [cite: 212]"
+    },
+    "quiz": {
+      "sentence": "They _____ titles, lifestyles, salaries, and symbols...",
+      "translation": "그들은 직함, 라이프스타일, 연봉, 그리고 상징들을 뒤쫓습니다... [cite: 212]",
+      "hint": "To run after someone or something to catch them."
+    }
+  },
+  {
+    "id": 28,
+    "method": "miss",
+    "ipa": "/mɪs/",
+    "pronunciation": "미스",
+    "logic": {
+      "before": "A chance or a person's quality is visible",
+      "after": "Failing to see or catch the important part",
+      "description": "중요한 가치나 기회를 보지 못하고 놓치는 로직 [cite: 156, 234]"
+    },
+    "quiz": {
+      "sentence": "When we measure people too quickly, we ____ the best parts of them.",
+      "translation": "사람들을 너무 빨리 판단하면, 우리는 그들의 가장 좋은 부분들을 놓치게 됩니다. [cite: 234]",
+      "hint": "To fail to hit, reach, or see something."
+    }
+  },
+  {
+    "id": 29,
+    "method": "heal",
+    "ipa": "/hiːl/",
+    "pronunciation": "히일",
+    "logic": {
+      "before": "Damaged or wounded heart (Status: Pain)",
+      "after": "Restored and healthy heart (Status: Peace)",
+      "description": "상처받은 마음을 치유하고 정상화하는 로직 [cite: 319]"
+    },
+    "quiz": {
+      "sentence": "And maybe even easier to ____ from it.",
+      "translation": "그리고 어쩌면 그것으로부터 치유되는 것이 더 쉬울 수도 있습니다. [cite: 319]",
+      "hint": "To become healthy again."
+    }
+  },
+  {
+    "id": 30,
+    "method": "assign",
+    "ipa": "/əˈsaɪn/",
+    "pronunciation": "어사인",
+    "logic": {
+      "before": "Undefined worth of the heart",
+      "after": "Specific value or mission given to the heart",
+      "description": "자신의 마음에 조용히 가치를 부여하거나 할당하는 로직 [cite: 321]"
+    },
+    "quiz": {
+      "sentence": "What kind of worth they quietly ______ to their own hearts.",
+      "translation": "그들이 자신의 마음에 조용히 어떤 가치를 부여하는지. [cite: 321]",
+      "hint": "To give a particular value or job."
+    }
+  },
+  {
+    "id": 31,
+    "method": "nod",
+    "ipa": "/nɒd/",
+    "pronunciation": "나드",
+    "logic": {
+      "before": "Silent or neutral posture",
+      "after": "Moving head to show polite agreement or acknowledgment",
+      "description": "상대방의 말에 예의상 혹은 긍정의 의미로 고개를 끄덕이는 로직"
+    },
+    "quiz": {
+      "sentence": "The kind of topic where people ___ politely.",
+      "translation": "사람들이 예의 바르게 고개를 끄덕이는 종류의 주제.",
+      "hint": "To move your head up and down. [cite: 7]"
+    }
+  },
+  {
+    "id": 32,
+    "method": "touch",
+    "ipa": "/tʌtʃ/",
+    "pronunciation": "터치",
+    "logic": {
+      "before": "The topic stays surface-level or simple",
+      "after": "The topic reaches deep/sensitive parts (nerves)",
+      "description": "단순한 대화가 깊은 감정이나 예민한 부분을 건드리는 로직"
+    },
+    "quiz": {
+      "sentence": "Then suddenly starts ________ all kinds of nerves.",
+      "translation": "그러다 갑자기 온갖 예민한 부분들을 건드리기 시작하죠.",
+      "hint": "To come into contact with something. "
+    }
+  },
+  {
+    "id": 33,
+    "method": "deserve",
+    "ipa": "/dɪˈzɜːrv/",
+    "pronunciation": "디저브",
+    "logic": {
+      "before": "A person is treated normally",
+      "after": "Qualified/Entitled to receive respect based on 'proof'",
+      "description": "존중이나 보상을 받을 마땅한 자격이 있음을 나타내는 로직"
+    },
+    "quiz": {
+      "sentence": "Proof that you _______ respect.",
+      "translation": "당신이 존중받을 자격이 있다는 증거.",
+      "hint": "To be worthy of something. [cite: 14]"
+    }
+  },
+  {
+    "id": 34,
+    "method": "trust",
+    "ipa": "/trʌst/",
+    "pronunciation": "트러스트",
+    "logic": {
+      "before": "Skepticism or neutral feeling toward someone",
+      "after": "Full belief in someone's reliability (often based on wealth)",
+      "description": "상대방의 능력이나 말을 전적으로 신뢰하게 되는 로직"
+    },
+    "quiz": {
+      "sentence": "Why do people seem to _____ rich people more?",
+      "translation": "왜 사람들은 부자들을 더 신뢰하는 것처럼 보일까요?",
+      "hint": "To believe that someone is good and honest. [cite: 25]"
+    }
+  },
+  {
+    "id": 35,
+    "method": "doubt",
+    "ipa": "/daʊt/",
+    "pronunciation": "다우트",
+    "logic": {
+      "before": "System confidence: 100%",
+      "after": "System confidence: 30% (Uncertainty loaded)",
+      "description": "확신이 있던 자아 데이터에 불확실성을 로드하는 로직"
+    },
+    "quiz": {
+      "sentence": "Why do I start ________ myself when life is not looking impressive?",
+      "translation": "삶이 인상적이지 않아 보일 때 왜 나 자신을 의심하기 시작할까요?",
+      "hint": "To feel uncertain about something. [cite: 27]"
+    }
+  },
+  {
+    "id": 36,
+    "method": "mistake",
+    "ipa": "/mɪˈsteɪk/",
+    "pronunciation": "미스테이크",
+    "logic": {
+      "before": "Wealth and Intelligence are different data types",
+      "after": "Wealth is incorrectly identified as Intelligence",
+      "description": "데이터 A를 B로 잘못 식별하여 시스템 에러를 내는 로직"
+    },
+    "quiz": {
+      "sentence": "Wealth often gets ________ for intelligence.",
+      "translation": "부유함은 종종 지능으로 오해받곤 합니다.",
+      "hint": "To be wrong about something. [cite: 33]"
+    }
+  },
+  {
+    "id": 37,
+    "method": "reflect",
+    "ipa": "/rɪˈflekt/",
+    "pronunciation": "리플렉트",
+    "logic": {
+      "before": "Surface listening only",
+      "after": "Deep-processing of information in the mind",
+      "description": "정보를 단순히 듣는 것을 넘어 깊이 반추하고 되새기는 로직"
+    },
+    "quiz": {
+      "sentence": "It's there for you if you'd like to _______ more deeply.",
+      "translation": "더 깊이 되새겨보고 싶은 분들을 위해 준비했습니다.",
+      "hint": "To think carefully about something. [cite: 39]"
+    }
+  },
+  {
+    "id": 38,
+    "method": "grow",
+    "ipa": "/ɡroʊ/",
+    "pronunciation": "그로우",
+    "logic": {
+      "before": "English level: B1 (Current)",
+      "after": "English level: B2 (Advanced/Expanded)",
+      "description": "지식이나 능력이 자연스럽게 확장되고 발전하는 로직"
+    },
+    "quiz": {
+      "sentence": "Let your English ____ naturally as you listen.",
+      "translation": "들으면서 당신의 영어가 자연스럽게 성장하게 하세요.",
+      "hint": "To increase in size or amount. [cite: 43]"
+    }
+  },
+  {
+    "id": 39,
+    "method": "survive",
+    "ipa": "/sərˈvaɪv/",
+    "pronunciation": "서바이브",
+    "logic": {
+      "before": "Struggling to exist in hard conditions",
+      "after": "Continuing to live/exist despite pressures",
+      "description": "치열한 환경 속에서 어떻게든 생존을 유지하는 로직"
+    },
+    "quiz": {
+      "sentence": "One day you're just trying to _______.",
+      "translation": "어느 날 당신은 그저 살아남으려고 노력하고 있을 뿐입니다.",
+      "hint": "To continue to live or exist. [cite: 65]"
+    }
+  },
+  {
+    "id": 40,
+    "method": "launch",
+    "ipa": "/lɔːntʃ/",
+    "pronunciation": "론치",
+    "logic": {
+      "before": "Business is in 'Ready' state (Idle)",
+      "after": "Business is in 'Running' state (Active)",
+      "description": "새로운 프로젝트나 사업을 세상에 공개하고 시작하는 로직"
+    },
+    "quiz": {
+      "sentence": "Someone your age _______ a business.",
+      "translation": "당신 또래 누군가는 사업을 시작했습니다.",
+      "hint": "To start a new activity or enterprise. [cite: 66]"
+    }
+  },
+  {
+    "id": 41,
+    "method": "admire",
+    "ipa": "/ədˈmaɪər/",
+    "pronunciation": "어드마이어",
+    "logic": {
+      "before": "Observing someone's success",
+      "after": "Feeling respect and approval for that success",
+      "description": "타인의 성공이나 부를 높게 평가하며 존경을 표하는 로직"
+    },
+    "quiz": {
+      "sentence": "A lot of people don't just ______ wealth. They trust it.",
+      "translation": "많은 사람은 부를 단순히 동경하는 것이 아니라, 신뢰합니다.",
+      "hint": "To respect and approve of someone. [cite: 124]"
+    }
+  },
+  {
+    "id": 42,
+    "method": "assume",
+    "ipa": "/əˈsuːm/",
+    "pronunciation": "어슘",
+    "logic": {
+      "before": "No proof of competence",
+      "after": "Believing competence exists without verification",
+      "description": "증거 없이 당연히 그럴 것이라고 짐작하여 결론 내리는 로직"
+    },
+    "quiz": {
+      "sentence": "People also start ________ they must have more competence.",
+      "translation": "사람들은 또한 그들이 더 많은 능력을 갖추었을 것이라고 가정하기 시작합니다.",
+      "hint": "To accept something as true without proof. [cite: 135]"
+    }
+  },
+  {
+    "id": 43,
+    "method": "absorb",
+    "ipa": "/əbˈzɔːrb/",
+    "pronunciation": "어브조브",
+    "logic": {
+      "before": "External message (Money = Success)",
+      "after": "Internalized belief in the mind",
+      "description": "사회적 메시지를 스폰지처럼 마음속으로 빨아들이는 로직"
+    },
+    "quiz": {
+      "sentence": "People start _________ that message.",
+      "translation": "사람들은 그 메시지를 흡수하기 시작합니다.",
+      "hint": "To take in or soak up. [cite: 148]"
+    }
+  },
+  {
+    "id": 44,
+    "method": "damage",
+    "ipa": "/ˈdæmɪdʒ/",
+    "pronunciation": "대미지",
+    "logic": {
+      "before": "Self-perception is healthy",
+      "after": "Self-perception is harmed or corrupted",
+      "description": "잘못된 압박으로 인해 자아 인식 시스템을 망가뜨리는 로직"
+    },
+    "quiz": {
+      "sentence": "That can slowly ______ a person's self-perception.",
+      "translation": "그것은 천천히 한 사람의 자아 인식을 손상시킬 수 있습니다.",
+      "hint": "To harm or spoil something. [cite: 151]"
+    }
+  },
+  {
+    "id": 45,
+    "method": "undervalue",
+    "ipa": "/ˌʌndərˈvæljuː/",
+    "pronunciation": "언더밸류",
+    "logic": {
+      "before": "Effort: 100 (Max)",
+      "after": "Market value assigned: 20 (Low)",
+      "description": "실제 가치보다 훨씬 낮게 평가하거나 무시하는 로직"
+    },
+    "quiz": {
+      "sentence": "The pain of being hardworking but ___________.",
+      "translation": "열심히 일하지만 저평가받는 것의 고통.",
+      "hint": "To not appreciate someone enough. [cite: 165, 171]"
+    }
+  },
+  {
+    "id": 46,
+    "method": "filter",
+    "ipa": "/ˈfɪltər/",
+    "pronunciation": "필터",
+    "logic": {
+      "before": "Real life is raw and unpolished",
+      "after": "Life is presented as perfect and styled",
+      "description": "현실 데이터를 왜곡하거나 꾸며서 보여주는 로직"
+    },
+    "quiz": {
+      "sentence": "They see money performed. Styled. ________.",
+      "translation": "사람들은 연출되고, 스타일링 되고, 필터링 된 돈을 봅니다.",
+      "hint": "To process or change the appearance. [cite: 197]"
+    }
+  },
+  {
+    "id": 47,
+    "method": "distort",
+    "ipa": "/dɪˈstɔːrt/",
+    "pronunciation": "디스토트",
+    "logic": {
+      "before": "Definition of success is healthy/straight",
+      "after": "Definition is twisted/unbalanced",
+      "description": "정상적인 가치관을 비틀어 왜곡된 형태로 변형하는 로직"
+    },
+    "quiz": {
+      "sentence": "Maybe we're living with a ________ definition of success.",
+      "translation": "어쩌면 우리는 왜곡된 성공의 정의를 가지고 살고 있는지도 모릅니다.",
+      "hint": "To change something so it's false or unhealthy. [cite: 204, 205]"
+    }
+  },
+  {
+    "id": 48,
+    "method": "chase",
+    "ipa": "/tʃeɪs/",
+    "pronunciation": "체이스",
+    "logic": {
+      "before": "Choosing your own path",
+      "after": "Running after titles and salaries like a target",
+      "description": "자신이 진짜 원하는 것 대신 사회적 상징을 맹목적으로 쫓는 로직"
+    },
+    "quiz": {
+      "sentence": "They _____ titles, lifestyles, salaries, and symbols.",
+      "translation": "그들은 직함, 라이프스타일, 연봉, 그리고 상징들을 뒤쫓습니다.",
+      "hint": "To run after to catch something. [cite: 212]"
+    }
+  },
+  {
+    "id": 49,
+    "method": "miss",
+    "ipa": "/mɪs/",
+    "pronunciation": "미스",
+    "logic": {
+      "before": "The person's true value is available to see",
+      "after": "Failing to capture/see that value due to quick judgment",
+      "description": "섣부른 판단으로 상대방의 진정한 가치를 보지 못하고 놓치는 로직"
+    },
+    "quiz": {
+      "sentence": "When we measure people too quickly, we ____ the best parts of them.",
+      "translation": "사람들을 너무 빨리 판단하면, 우리는 그들의 가장 좋은 부분들을 놓치게 됩니다.",
+      "hint": "To fail to see or catch. [cite: 234]"
+    }
+  },
+  {
+    "id": 50,
+    "method": "heal",
+    "ipa": "/hiːl/",
+    "pronunciation": "히일",
+    "logic": {
+      "before": "Status: Wounded/In pain",
+      "after": "Status: Restored/Peaceful",
+      "description": "수치심이나 상처로부터 회복되어 시스템을 정상화하는 로직"
+    },
+    "quiz": {
+      "sentence": "And maybe even easier to ____ from it.",
+      "translation": "그리고 어쩌면 그것으로부터 치유되는 것이 더 쉬울 수도 있습니다.",
+      "hint": "To become healthy again. [cite: 319]"
+    }
+  }
+]

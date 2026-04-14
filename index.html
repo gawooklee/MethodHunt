@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logic Quiz - Method Mastering</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="app-container">
+        <!-- Start Screen -->
+        <section id="start-screen" class="screen">
+            <div class="header-section">
+                <h1 class="glow-text">Logic Quiz</h1>
+                <p class="subtitle">메소드 로직 집중 학습</p>
+            </div>
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <span class="stat-value" id="mastered-count">0</span>
+                    <span class="stat-label">학습 완료</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value" id="total-count">0</span>
+                    <span class="stat-label">전체 메소드</span>
+                </div>
+            </div>
+            <button id="start-btn" class="primary-btn pulse-anim">학습 시작하기 (10문제)</button>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen hidden">
+            <div class="top-nav">
+                <button id="exit-btn" class="icon-btn">✕</button>
+                <div class="progress-container">
+                    <div class="progress-bar-bg">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                    <span id="quiz-progress-text">1 / 10</span>
+                </div>
+            </div>
+
+            <div class="quiz-container">
+                <div class="question-card">
+                    <div class="logic-header">
+                        <div class="logic-bubble before" id="logic-before-q"></div>
+                        <div class="logic-arrow">→</div>
+                        <div class="logic-bubble after" id="logic-after-q"></div>
+                    </div>
+                    <p id="sentence" class="sentence-text">Loading...</p>
+                    <p id="translation" class="translation-text"></p>
+                    <div id="hint-box" class="hint-box hidden">
+                        <span class="hint-icon">💡</span>
+                        <p id="hint-text"></p>
+                    </div>
+                </div>
+
+                <div id="options-grid" class="options-grid">
+                    <!-- Options buttons will be injected here -->
+                </div>
+            </div>
+
+            <div class="footer-actions">
+                <button id="show-hint-btn" class="secondary-btn">힌트 보기</button>
+            </div>
+        </section>
+
+        <!-- Feedback Overlay -->
+        <div id="feedback-overlay" class="overlay hidden">
+            <div class="feedback-card">
+                <div id="feedback-icon" class="status-icon"></div>
+                <h2 id="feedback-title">Correct!</h2>
+                
+                <div class="review-details">
+                    <div class="detail-row">
+                        <span class="label">Pronunciation</span>
+                        <div class="value-box">
+                            <span id="review-ipa" class="ipa">/taɪ/</span>
+                            <span id="review-pron" class="korean">타이</span>
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <span class="label">Logic</span>
+                        <div class="logic-flow">
+                            <div class="logic-step">
+                                <span class="step-label">Before</span>
+                                <p id="logic-before" class="step-content"></p>
+                            </div>
+                            <div class="arrow">↓</div>
+                            <div class="logic-step">
+                                <span class="step-label">After</span>
+                                <p id="logic-after" class="step-content"></p>
+                            </div>
+                        </div>
+                        <p id="logic-desc" class="logic-desc"></p>
+                    </div>
+                </div>
+
+                <button id="next-btn" class="primary-btn">다음 문제</button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="screen hidden">
+            <div class="result-header">
+                <div class="trophy-icon">🏆</div>
+                <h1>학습 완료!</h1>
+                <p id="result-stat" class="result-stat">10문제 중 8문제를 맞혔습니다.</p>
+            </div>
+            
+            <div class="result-actions">
+                <button id="restart-btn" class="primary-btn">다시 학습하기</button>
+                <button id="home-btn" class="secondary-btn">홈으로</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
