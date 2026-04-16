@@ -1,902 +1,1002 @@
 [
   {
     "id": 1,
-    "scenario": "Your heart is heavy with quiet, unsaid questions.",
-    "question": "마음속에 무거운 질문들을 품고만 있는 상태입니다. 이 데이터를 유지하며 지탱하는 메소드는?",
-    "target": "Quiet questions in the heart",
-    "correct_method": "carry",
-    "ipa": "/ˈkæri/",
-    "delta": {
-      "before": "Empty heart [Status: Idle]",
-      "after": "Heart with heavy questions [Status: Loading]"
+    "method": "carry",
+    "category": "Memory",
+    "logic_flow": {
+      "before": "L1/L2 Cache 영역에 스쳐 지나가는 휘발성 질문 패킷들이 발생함.",
+      "method_guide": "데이터를 유실(Drop)하지 않고 시스템의 메인 메모리(RAM)에 상주시피 적재하여 '데이터 영속성(Persistence)'을 유지하세요.",
+      "after": "패치 완료. 질문 데이터가 휘발되지 않고 시스템 내부에 묵직하게 보존(Holding)됩니다."
     },
-    "quiz_sentence": "Through the quiet questions people _____ in their hearts.",
-    "script_ref": "Source 3",
-    "hint": "물건을 운반하거나 무게를 지탱할 때 쓰는 메소드입니다.",
-    "translation": "사람들이 마음속에 품고 있는 조용한 질문들을 통해.",
-    "pronunciation": "캐리",
-    "logic_description": "시스템 로직: is heavy with quiet, unsaid questions. 상황 발생. 마음속에 무거운 질문들을 품고만 있는 상태입니다. 이 데이터를 유지하며 지탱하는 메소드는? 이에 대응하여 `carry` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Through the quiet questions people _____ in their hearts.",
+      "answer": "carry",
+      "distractors": [
+        "drop",
+        "attach",
+        "get across"
+      ]
+    },
+    "ipa": "/ˈkæri/"
   },
   {
     "id": 2,
-    "scenario": "People add deep social meaning to neutral things like money.",
-    "question": "돈이라는 객체에 '성공'이라는 의미 데이터를 강제로 결합시키려 합니다. 어떤 메소드를 써야 할까요?",
-    "target": "Meaning and Money",
-    "correct_method": "attach",
-    "ipa": "/əˈtætʃ/",
-    "delta": {
-      "before": "Plain money [Status: Raw]",
-      "after": "Money with heavy meaning [Status: Linked]"
+    "method": "attach",
+    "category": "Process",
+    "logic_flow": {
+      "before": "중립적인 Raw Data(돈, 물건)가 시스템에 입력됨.",
+      "method_guide": "객체 표면에 '의미(Meaning)'라는 메타데이터 속성을 추가(Append)하여 데이터의 가중치를 변화시키세요.",
+      "after": "패치 완료. 단순한 물건이 특정 가치를 지닌 'Weighted Object'로 업데이트되었습니다."
     },
-    "quiz_sentence": "All the meaning people ______ to those things.",
-    "script_ref": "Source 8",
-    "hint": "이메일에 파일을 '첨부'할 때 쓰는 그 단어입니다.",
-    "translation": "사람들이 그런 것들에 부여하는 모든 의미.",
-    "pronunciation": "어태치",
-    "logic_description": "시스템 로직: People add deep social meaning to neutral things like money. 상황 발생. 돈이라는 객체에 '성공'이라는 의미 데이터를 강제로 결합시키려 합니다. 어떤 메소드를 써야 할까요? 이에 대응하여 `attach` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "All the meaning people ______ to those things.",
+      "answer": "attach",
+      "distractors": [
+        "separate",
+        "carry",
+        "detach"
+      ]
+    },
+    "ipa": "/əˈtætʃ/"
   },
   {
     "id": 3,
-    "scenario": "A bank account is no longer just money; it's now seen as a life report card.",
-    "question": "은행 계좌의 성질이 '인생 성적표'라는 전혀 다른 클래스로 변환되었습니다. 실행된 메소드는?",
-    "target": "Bank account",
-    "correct_method": "become",
-    "ipa": "/bɪˈkʌm/",
-    "delta": {
-      "before": "Financial tool [Class: Account]",
-      "after": "Evaluation tool [Class: ReportCard]"
+    "method": "become",
+    "category": "Process",
+    "logic_flow": {
+      "before": "A 타입의 데이터(계좌)가 시스템 내부에 존재함.",
+      "method_guide": "객체의 본질적인 데이터 규격(Schema)을 B 타입(성적표)으로 완전히 강제 형변환(Type Casting) 하세요.",
+      "after": "패치 완료. 객체의 ID는 유지되나, 시스템 인식 타입이 완전히 전환되었습니다."
     },
-    "quiz_sentence": "Your bank account _______ your report card for life.",
-    "script_ref": "Source 15",
-    "hint": "~이 되다라는 상태 변화의 기본 메소드입니다.",
-    "translation": "당신의 은행 계좌는 인생의 성적표가 됩니다.",
-    "pronunciation": "비컴",
-    "logic_description": "시스템 로직: A bank account is no longer just money; it's now seen as a life report card. 상황 발생. 은행 계좌의 성질이 '인생 성적표'라는 전혀 다른 클래스로 변환되었습니다. 실행된 메소드는? 이에 대응하여 `become` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Your bank account _______ your report card for life.",
+      "answer": "become",
+      "distractors": [
+        "look like",
+        "stay",
+        "act"
+      ]
+    },
+    "ipa": "/bɪˈkʌm/"
   },
   {
     "id": 4,
-    "scenario": "The world tries to put a number on everything, including your worth.",
-    "question": "추상적인 가치를 숫자로 치환하여 정량화하려는 시스템 로직이 실행됩니다. 호출된 메소드는?",
-    "target": "Everything (Value)",
-    "correct_method": "measure",
-    "ipa": "/ˈmeʒər/",
-    "pronunciation": "메저",
-    "delta": {
-      "before": "Abstract worth [Type: String]",
-      "after": "Quantified number [Type: Double/Int]"
+    "method": "measure",
+    "category": "Process",
+    "logic_flow": {
+      "before": "정성적인 String 타입의 가치 데이터가 유입됨.",
+      "method_guide": "추상적인 데이터를 '자(Ruler)' 라이브러리로 스캔하여 정량적인 Number 수치로 렌더링하세요.",
+      "after": "패치 완료. 모호했던 값이 구체적인 수치(Quantified Data)로 확정되었습니다."
     },
-    "quiz_sentence": "A world that seems to _______ everything.",
-    "script_ref": "Source 30",
-    "hint": "치수나 무게를 잴 때 사용하는 라이브러리입니다.",
-    "translation": "모든 것을 측정하는 것 처럼 보이는 세상.",
-    "logic_description": "시스템 로직: The world tries to put a number on everything, including your worth. 상황 발생. 추상적인 가치를 숫자로 치환하여 정량화하려는 시스템 로직이 실행됩니다. 호출된 메소드는? 이에 대응하여 `measure` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "A world that seems to _______ everything.",
+      "answer": "measure",
+      "distractors": [
+        "feel",
+        "imagine",
+        "carry"
+      ]
+    },
+    "ipa": "/ˈmeʒə(r)/"
   },
   {
     "id": 5,
-    "scenario": "Wealthy people's opinions are treated as wise, even when they aren't.",
-    "question": "부유함(Wealth)을 지능(Intelligence) 데이터로 잘못 캐스팅하여 처리하는 에러가 발생했습니다.",
-    "target": "Wealth and Intelligence",
-    "correct_method": "mistake",
-    "ipa": "/mɪˈsteɪk/",
-    "delta": {
-      "before": "Wealth != Intelligence [Status: Distinct]",
-      "after": "Wealth == Intelligence [Status: Error_Casting]"
+    "method": "mistake",
+    "category": "Repair",
+    "logic_flow": {
+      "before": "데이터 A(Wealth)와 B(Intelligence)가 서로 다른 주소에 존재함.",
+      "method_guide": "실제로는 다른 데이터인데(`!=`), 시스템 인지 필터 오류로 엉뚱한 인덱스에 매핑하는 '식별 에러'를 발생시키세요.",
+      "after": "에러 발생. 서로 다른 두 객체가 시스템 로그상에서 동일 가치로 오인(Logic Error)되었습니다."
     },
-    "quiz_sentence": "Why wealth often gets ________ for intelligence.",
-    "script_ref": "Source 33",
-    "hint": "A를 B로 오해하여 시스템 에러를 일으키는 명칭입니다.",
-    "translation": "왜 부(wealth)가 종종 지능으로 오해받는지.",
-    "pronunciation": "미스테이크",
-    "logic_description": "시스템 로직: Wealthy people's opinions are treated as wise, even when they aren't. 상황 발생. 부유함(Wealth)을 지능(Intelligence) 데이터로 잘못 캐스팅하여 처리하는 에러가 발생했습니다. 이에 대응하여 `mistake` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Why wealth often gets ________ for intelligence.",
+      "answer": "mistaken",
+      "distractors": [
+        "known",
+        "taken",
+        "equated"
+      ]
+    },
+    "ipa": "/mɪˈsteɪk/"
   },
   {
     "id": 6,
-    "scenario": "Your sense of worth depends on your income.",
-    "question": "자아 가치가 외부 변수(돈)의 등락에 따라 함께 움직이도록 강하게 결합되었습니다.",
-    "target": "Self-worth and Money",
-    "correct_method": "tie",
-    "ipa": "/taɪ/",
-    "delta": {
-      "before": "Independent worth [Status: Free]",
-      "after": "Dependent worth [Status: Tied]"
+    "method": "tie",
+    "category": "Process",
+    "logic_flow": {
+      "before": "독립적으로 작동하던 두 노드(자아 가치, 통장 잔고)가 있음.",
+      "method_guide": "두 객체 사이에 강력한 종속성(Dependency)을 생성하여 데이터가 강제 연결되도록 매듭을 지으세요.",
+      "after": "패치 완료. 독립적이었던 시스템이 상호 종속적인(Tied) 상태로 변했습니다."
     },
-    "quiz_sentence": "People begin to ___ their self-worth to it.",
-    "script_ref": "Source 85",
-    "hint": "매듭을 묶어 고정하는 3글자 메소드입니다.",
-    "translation": "사람들은 자신의 자아 가치를 그것에 묶기 시작합니다.",
-    "pronunciation": "타이",
-    "logic_description": "시스템 로직: Your sense of worth depends on your income. 상황 발생. 자아 가치가 외부 변수(돈)의 등락에 따라 함께 움직이도록 강하게 결합되었습니다. 이에 대응하여 `tie` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "People begin to ___ their self-worth to it.",
+      "answer": "tie",
+      "distractors": [
+        "untie",
+        "equate",
+        "reflect"
+      ]
+    },
+    "ipa": "/taɪ/"
   },
   {
     "id": 7,
-    "scenario": "Society acts as if money and success are exactly the same thing.",
-    "question": "서로 다른 두 객체를 '==' 연산자로 비교하여 동일하게 처리하려 합니다.",
-    "target": "Money and Success",
-    "correct_method": "equate",
-    "ipa": "/ɪˈkweɪt/",
-    "delta": {
-      "before": "Money & Success [Status: Different]",
-      "after": "Money is Success [Status: Identical]"
+    "method": "equate",
+    "category": "Process",
+    "logic_flow": {
+      "before": "서로 다른 가치를 가진 두 데이터 패킷이 유입됨.",
+      "method_guide": "비교 연산자 '=='를 사용하여 두 데이터의 가치값이 완전히 동일하다고 시스템 논리를 확정하세요.",
+      "after": "패치 완료. 시스템 내부에서 두 객체는 동일한 우선순위(Equivalent)로 처리됩니다."
     },
-    "quiz_sentence": "Society often _______ money with success.",
-    "script_ref": "Source 105",
-    "hint": "Equal의 동사형 메소드입니다.",
-    "translation": "사회는 종종 돈을 성공과 동일시합니다.",
-    "pronunciation": "이퀘이트",
-    "logic_description": "시스템 로직: Society acts as if money and success are exactly the same thing. 상황 발생. 서로 다른 두 객체를 '==' 연산자로 비교하여 동일하게 처리하려 합니다. 이에 대응하여 `equate` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Society often _______s money with success.",
+      "answer": "equate",
+      "distractors": [
+        "mistake",
+        "judge",
+        "tie"
+      ]
+    },
+    "ipa": "/ɪˈkweɪt/"
   },
   {
     "id": 8,
-    "scenario": "People judge a whole person based only on their income.",
-    "question": "데이터의 겉면(표면)만 보고 전체 객체의 가치를 속단해버리는 로직입니다.",
-    "target": "A person / A life",
-    "correct_method": "judge",
-    "ipa": "/dʒʌdʒ/",
-    "delta": {
-      "before": "Unknown character [Status: Protected]",
-      "after": "Superficial evaluation [Status: Exposed]"
+    "method": "judge",
+    "category": "Process",
+    "logic_flow": {
+      "before": "전체 소스코드가 아닌 일부 UI(겉표지) 패킷만 수신된 상태.",
+      "method_guide": "제한된 표면 데이터만으로 객체 전체의 가치를 최종 승인(Commit Evaluation) 하세요.",
+      "after": "패치 완료. 데이터 분석 없이 최종 가치 판정(Verdict)이 시스템에 기록되었습니다."
     },
-    "quiz_sentence": "It's like _______ a whole life by the cover.",
-    "script_ref": "Source 110",
-    "hint": "법정의 판사처럼 판결을 내리는 행위입니다.",
-    "translation": "그것은 마치 표지만 보고 전체 인생을 판단하는 것과 같습니다.",
-    "pronunciation": "저지",
-    "logic_description": "시스템 로직: People judge a whole person based only on their income. 상황 발생. 데이터의 겉면(표면)만 보고 전체 객체의 가치를 속단해버리는 로직입니다. 이에 대응하여 `judge` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "It's like _______ a whole life by the cover.",
+      "answer": "judging",
+      "distractors": [
+        "sharing",
+        "breathing",
+        "admiring"
+      ]
+    },
+    "ipa": "/dʒʌdʒ/"
   },
   {
     "id": 9,
-    "scenario": "People show respect to someone just because of their high position.",
-    "question": "대상의 실력과 상관없이 '지위(Prestige)' 데이터만 보고 존경 신호를 보냅니다.",
-    "target": "Social respect",
-    "correct_method": "admire",
-    "ipa": "/ədˈmaɪər/",
-    "delta": {
-      "before": "Neutral observation [Status: Wait]",
-      "after": "High respect sent [Status: Admiration]"
+    "method": "admire",
+    "category": "Transfer",
+    "logic_flow": {
+      "before": "특정 객체(부자)에 대한 시스템 반응이 Idle 상태임.",
+      "method_guide": "대상에게 높은 가중치를 부여하고, 긍정적인 '존경 신호'를 외부로 방출(Broadcast) 하세요.",
+      "after": "패치 완료. 대상 노드에 긍정 신호가 전송되어 'Respected' 상태로 렌더링됩니다."
     },
-    "quiz_sentence": "A lot of people don't just ______ wealth. They trust it.",
-    "script_ref": "Source 124",
-    "hint": "동경하거나 감탄하며 바라보는 메소드입니다.",
-    "translation": "많은 사람들은 단지 부를 동경하는 것이 아닙니다. 그들은 그것을 신뢰합니다.",
-    "pronunciation": "어드마이어",
-    "logic_description": "시스템 로직: People show respect to someone just because of their high position. 상황 발생. 대상의 실력과 상관없이 '지위(Prestige)' 데이터만 보고 존경 신호를 보냅니다. 이에 대응하여 `admire` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "A lot of people don't just ______ wealth.",
+      "answer": "admire",
+      "distractors": [
+        "damage",
+        "distort",
+        "doubt"
+      ]
+    },
+    "ipa": "/ədˈmaɪə(r)/"
   },
   {
     "id": 10,
-    "scenario": "You feel small because of a judgmental glance from someone rich.",
-    "question": "상대방이 나를 낮은 레벨의 데이터로 취급하여 무시하는 시선 처리 로직을 실행했습니다.",
-    "target": "You (The User)",
-    "correct_method": "look down on",
-    "ipa": "/lʊk daʊn ɒn/",
-    "delta": {
-      "before": "Equal level [Status: Parallel]",
-      "after": "Lower level [Status: Inferior]"
+    "method": "arrive",
+    "category": "Transfer",
+    "logic_flow": {
+      "before": "가치 데이터(존경)가 네트워크를 통해 전송 중임.",
+      "method_guide": "패킷이 실제 주체보다 먼저 목적지 노드에 도달하여 세션을 장악하도록 처리하세요.",
+      "after": "패치 완료. 특정 가치가 대상보다 먼저 도착(Packet Arrival)하여 시스템 환경을 선점했습니다."
     },
-    "quiz_sentence": "Some people are ____ ____ __ because they earn less.",
-    "script_ref": "Source 175",
-    "hint": "아래를 내려다본다는 의미의 3단어 조합입니다.",
-    "translation": "어떤 사람들은 수입이 적다는 이유로 무시당합니다.",
-    "pronunciation": "룩 다운 온",
-    "logic_description": "시스템 로직: You feel small because of a judgmental glance from someone rich. 상황 발생. 상대방이 나를 낮은 레벨의 데이터로 취급하여 무시하는 시선 처리 로직을 실행했습니다. 이에 대응하여 `look down on` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "That kind of respect that ______s before the person.",
+      "answer": "arrive",
+      "distractors": [
+        "leaves",
+        "becomes",
+        "misses"
+      ]
+    },
+    "ipa": "/əˈraɪv/"
   },
   {
     "id": 11,
-    "scenario": "You see someone successful and a small part of you goes quiet with jealousy.",
-    "question": "남의 성공을 보고 내면의 데이터가 위축되며 '정적'이 흐르는 상태입니다. 실행된 로직은?",
-    "target": "A small part of you",
-    "correct_method": "go quiet",
-    "ipa": "/ɡoʊ ˈkwaɪət/",
-    "delta": {
-      "before": "Normal state [Status: Active]",
-      "after": "Suppressed/Shrunken state [Status: Quiet]"
+    "method": "handle",
+    "category": "Process",
+    "logic_flow": {
+      "before": "복잡한 작업 패킷들이 제어되지 않아 시스템 과부하가 우려되는 상황.",
+      "method_guide": "주어진 상황을 효과적으로 조작하고 통제하는 '메인 컨트롤러(Task Control)' 라이브러리를 실행하세요.",
+      "after": "패치 완료. 무질서했던 작업들이 제어 권한(Management) 하에 안정적으로 처리됩니다."
     },
-    "quiz_sentence": "Some small part of you __es ____.",
-    "script_ref": "Source 71",
-    "hint": "활발하던 데이터가 조용해지거나 위축될 때 쓰는 표현입니다.",
-    "translation": "당신의 아주 작은 부분 중 일부는 조용해집니다(위축됩니다).",
-    "pronunciation": "고 콰이어트",
-    "logic_description": "시스템 로직: You see someone successful and a small part of you goes quiet with jealousy. 상황 발생. 남의 성공을 보고 내면의 데이터가 위축되며 '정적'이 흐르는 상태입니다. 실행된 로직은? 이에 대응하여 `go quiet` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "The ability to do something well and ______ it.",
+      "answer": "handle",
+      "distractors": [
+        "doubt",
+        "nod",
+        "miss"
+      ]
+    },
+    "ipa": "/ˈhændl/"
   },
   {
     "id": 12,
-    "scenario": "You are worried about being slower than others in achieving success.",
-    "question": "다른 객체들보다 처리 속도가 늦어 뒤처져 있다는 '지연 에러'를 감지했습니다.",
-    "target": "Your progress",
-    "correct_method": "be behind",
-    "ipa": "/bi bɪˈhaɪnd/",
-    "delta": {
-      "before": "On track [Status: Parallel]",
-      "after": "Delayed [Status: Behind]"
+    "method": "absorb",
+    "category": "Transfer",
+    "logic_flow": {
+      "before": "외부 네트워크(사회)로부터 강력한 메시지 스트림이 유입됨.",
+      "method_guide": "입력 필터링 없이 데이터를 내부 메모리로 통째로 빨아들이는 '데이터 인카네이션(Ingestion)'을 수행하세요.",
+      "after": "패치 완료. 외부 데이터가 내면의 로컬 저장소에 완전히 각인(Internalized)되었습니다."
     },
-    "quiz_sentence": "Am I ______?",
-    "script_ref": "Source 74",
-    "hint": "위치상 뒤에 있거나 진도가 늦었을 때 사용하는 상태 메소드입니다.",
-    "translation": "내가 뒤처진 걸까?",
-    "pronunciation": "비 비하인드",
-    "logic_description": "시스템 로직: You are worried about being slower than others in achieving success. 상황 발생. 다른 객체들보다 처리 속도가 늦어 뒤처져 있다는 '지연 에러'를 감지했습니다. 이에 대응하여 `be behind` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "People start ______ing that message.",
+      "answer": "absorb",
+      "distractors": [
+        "reflecting",
+        "rejecting",
+        "launching"
+      ]
+    },
+    "ipa": "/əbˈzɔːrb/"
   },
   {
     "id": 13,
-    "scenario": "Society loves using visible numbers to compare people's lives.",
-    "question": "시스템이 객체 간의 우열을 가리기 위해 '점수판'을 생성하고 데이터를 대조합니다.",
-    "target": "People's lives",
-    "correct_method": "compare",
-    "ipa": "/kəmˈper/",
-    "delta": {
-      "before": "Unique data [Status: Independent]",
-      "after": "Ranked data [Status: Compared]"
+    "method": "damage",
+    "category": "Repair",
+    "logic_flow": {
+      "before": "시스템의 자아 인식 데이터 무결성이 보존되어 있는 상태.",
+      "method_guide": "지속적인 비교 연산 압박을 가하여 데이터 무결성(Integrity)을 파손시키고 시스템 에러를 유발하세요.",
+      "after": "에러 발생. 자아 데이터 세그먼트가 손상(Corrupted)되어 무결성이 붕괴되었습니다."
     },
-    "quiz_sentence": "Money is visible. Countable. __________.",
-    "script_ref": "Source 100",
-    "hint": "두 데이터를 대조하여 차이를 분석하는 메소드입니다.",
-    "translation": "돈은 가시적이고, 셀 수 있으며, 비교 가능합니다.",
-    "pronunciation": "컴페어",
-    "logic_description": "시스템 로직: Society loves using visible numbers to compare people's lives. 상황 발생. 시스템이 객체 간의 우열을 가리기 위해 '점수판'을 생성하고 데이터를 대조합니다. 이에 대응하여 `compare` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "That can slowly ______ a person's self-perception.",
+      "answer": "damage",
+      "distractors": [
+        "heal",
+        "improve",
+        "launch"
+      ]
+    },
+    "ipa": "/ˈdæmɪdʒ/"
   },
   {
     "id": 14,
-    "scenario": "You think people only look at the surface, not your deeper character.",
-    "question": "데이터의 핵심(Core)은 무시하고 인터페이스(Surface)만 렌더링하는 얕은 분석 로직입니다.",
-    "target": "Evaluation logic",
-    "correct_method": "be superficial",
-    "ipa": "/bi ˌsuːpərˈfɪʃl/",
-    "delta": {
-      "before": "Deep analysis [Status: Full]",
-      "after": "Shallow analysis [Status: SurfaceOnly]"
+    "method": "undervalue",
+    "category": "Process",
+    "logic_flow": {
+      "before": "실제 가치(Value)가 높은 정규직 데이터 패킷이 유입됨.",
+      "method_guide": "객체의 실제 수치보다 현저히 낮은 우선순위(Rank)를 강제로 할당하여 하향 렌더링하세요.",
+      "after": "패치 완료. 데이터의 실제 질량에 비해 낮은 가치값(Low Recognition)으로 시스템에 기록되었습니다."
     },
-    "quiz_sentence": "That way of thinking is very ___________.",
-    "script_ref": "Source 108",
-    "hint": "깊이가 없고 겉모습만 따지는 상태를 뜻합니다.",
-    "translation": "그런 사고방식은 매우 피상적입니다.",
-    "pronunciation": "비 수퍼피셜",
-    "logic_description": "시스템 로직: You think people only look at the surface, not your deeper character. 상황 발생. 데이터의 핵심(Core)은 무시하고 인터페이스(Surface)만 렌더링하는 얕은 분석 로직입니다. 이에 대응하여 `be superficial` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "The pain of being hardworking but ___________.",
+      "answer": "undervalued",
+      "distractors": [
+        "overpaid",
+        "celebrated",
+        "admired"
+      ]
+    },
+    "ipa": "/ˌʌndəˈvæljuː/"
   },
   {
     "id": 15,
-    "scenario": "You start thinking you are not good enough because you earn less.",
-    "question": "외부 데이터(돈)의 부재로 인해 자아(Self) 데이터에 대한 신뢰도를 하락시키는 로직입니다.",
-    "target": "Self-confidence",
-    "correct_method": "doubt",
-    "ipa": "/daʊt/",
-    "delta": {
-      "before": "Self-trust [Status: Valid]",
-      "after": "Self-uncertainty [Status: Invalid]"
+    "method": "look down on",
+    "category": "Process",
+    "logic_flow": {
+      "before": "두 데이터 노드가 수평적인 계층(Level)에 위치함.",
+      "method_guide": "타겟의 수직 좌표를 자신보다 하위 계층(Inferior)으로 규정하고 시각적으로 무시하는 처리를 수행하세요.",
+      "after": "패치 완료. 데이터 계층 구조가 수직으로 재배치(Vertical Down)되었습니다."
     },
-    "quiz_sentence": "Why do I start ______ing myself?",
-    "script_ref": "Source 27",
-    "hint": "확신하지 못하고 의심하는 메소드입니다.",
-    "translation": "왜 나는 나 자신을 의심하기 시작하는 걸까?",
-    "pronunciation": "다우트",
-    "logic_description": "시스템 로직: You start thinking you are not good enough because you earn less. 상황 발생. 외부 데이터(돈)의 부재로 인해 자아(Self) 데이터에 대한 신뢰도를 하락시키는 로직입니다. 이에 대응하여 `doubt` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Some people are ____ed ____ __ because they earn less.",
+      "answer": "look down on",
+      "distractors": [
+        "look up to",
+        "look after",
+        "look into"
+      ]
+    },
+    "ipa": "/lʊk daʊn ɒn/"
   },
   {
     "id": 16,
-    "scenario": "The message from society (Money=Success) is now inside your heart.",
-    "question": "외부 시스템의 자극이 내부 메모리로 완전히 전송되어 로드된 상태입니다.",
-    "target": "Social pressure/message",
-    "correct_method": "absorb",
-    "ipa": "/əbˈzɔːrb/",
-    "delta": {
-      "before": "External message [Status: Outside]",
-      "after": "Internalized belief [Status: Inside]"
+    "method": "perform",
+    "category": "Transfer",
+    "logic_flow": {
+      "before": "시스템 내부의 날것(Raw) 그대로의 라이프스타일 데이터가 존재함.",
+      "method_guide": "실제 값이 아닌, 외부 출력을 위해 연출되고 필터링된 '스타일링 데이터'를 UI에 렌더링하세요.",
+      "after": "패치 완료. 데이터 본질이 아닌 시연용 시뮬레이션(Acted Life)이 외부에 공개되었습니다."
     },
-    "quiz_sentence": "People start ______ing that message.",
-    "script_ref": "Source 148",
-    "hint": "스폰지가 물을 빨아들이듯 흡수하는 로직입니다.",
-    "translation": "사람들은 그 메시지를 흡수하기 시작합니다.",
-    "pronunciation": "업조브",
-    "logic_description": "시스템 로직: The message from society (Money=Success) is now inside your heart. 상황 발생. 외부 시스템의 자극이 내부 메모리로 완전히 전송되어 로드된 상태입니다. 이에 대응하여 `absorb` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "They see money _______ed. Styled. Filtered.",
+      "answer": "perform",
+      "distractors": [
+        "hidden",
+        "carried",
+        "untied"
+      ]
+    },
+    "ipa": "/pəˈfɔːrm/"
   },
   {
     "id": 17,
-    "scenario": "Constant comparison is hurting your inner mental health.",
-    "question": "반복적인 비교 연산으로 인해 자아 인식(Self-perception) 데이터가 손상되었습니다.",
-    "target": "Self-perception",
-    "correct_method": "damage",
-    "ipa": "/ˈdæmɪdʒ/",
-    "delta": {
-      "before": "Healthy mind [Status: Intact]",
-      "after": "Hurt mind [Status: Corrupted]"
+    "method": "distort",
+    "category": "Repair",
+    "logic_flow": {
+      "before": "성공(Success)의 정의 스키마가 정상적으로 설계되어 있음.",
+      "method_guide": "올바른 기준점(Definition)을 비정상적인 형태로 비틀어 시스템 프레임을 왜곡(Warp)시키세요.",
+      "after": "에러 발생. 성공의 정의가 비뚤어진 상태(Bent)로 변질되어 논리적 판단을 방해합니다."
     },
-    "quiz_sentence": "That can slowly ______ a person's self-perception.",
-    "script_ref": "Source 151",
-    "hint": "피해를 입히거나 손상시키는 메소드입니다.",
-    "translation": "그것은 한 사람의 자아 인식을 천천히 손상시킬 수 있습니다.",
-    "pronunciation": "대미지",
-    "logic_description": "시스템 로직: Constant comparison is hurting your inner mental health. 상황 발생. 반복적인 비교 연산으로 인해 자아 인식(Self-perception) 데이터가 손상되었습니다. 이에 대응하여 `damage` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Maybe we're living with a ________ definition of success.",
+      "answer": "distorted",
+      "distractors": [
+        "clarified",
+        "straight",
+        "balanced"
+      ]
+    },
+    "ipa": "/dɪˈstɔːrt/"
   },
   {
     "id": 18,
-    "scenario": "Teachers and nurses do great work but are not paid enough.",
-    "question": "수행하는 업무의 실제 가치(Input)보다 보상 데이터(Output)가 낮게 책정된 에러 상황입니다.",
-    "target": "Work value",
-    "correct_method": "undervalue",
-    "ipa": "/ˌʌndərˈvæljuː/",
-    "delta": {
-      "before": "High worth [Status: High]",
-      "after": "Low recognition [Status: Low]"
+    "method": "chase",
+    "category": "Process",
+    "logic_flow": {
+      "before": "시스템이 특정 타겟 없이 유휴(Idle) 상태에 머물러 있음.",
+      "method_guide": "외부 타겟(돈, 명예)을 향해 무한 루프를 생성하고 데이터 추격(Pursuit) 연산을 반복 실행하세요.",
+      "after": "패치 완료. 시스템 리소스가 특정 객체를 쫓는 무한 런닝(Hunting) 상태로 전환되었습니다."
     },
-    "quiz_sentence": "The pain of being hardworking but ___________.",
-    "script_ref": "Source 165",
-    "hint": "가치를 실제보다 낮게 평가하는 로직입니다.",
-    "translation": "열심히 일하지만 저평가받는 것에 대한 고통.",
-    "pronunciation": "언더밸류",
-    "logic_description": "시스템 로직: Teachers and nurses do great work but are not paid enough. 상황 발생. 수행하는 업무의 실제 가치(Input)보다 보상 데이터(Output)가 낮게 책정된 에러 상황입니다. 이에 대응하여 `undervalue` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "They _____ titles, lifestyles, and salaries.",
+      "answer": "chase",
+      "distractors": [
+        "avoid",
+        "carry",
+        "untie"
+      ]
+    },
+    "ipa": "/tʃeɪs/"
   },
   {
     "id": 19,
-    "scenario": "Social media makes everyone look like they are winning all the time.",
-    "question": "실제 데이터가 아닌, 필터를 거쳐 연출된 데이터만 네트워크에 배포되는 상황입니다.",
-    "target": "Digital identity",
-    "correct_method": "perform",
-    "ipa": "/pərˈfɔːrm/",
-    "delta": {
-      "before": "Real life [Status: Raw]",
-      "after": "Styled life [Status: Show]"
+    "method": "miss",
+    "category": "Repair",
+    "logic_flow": {
+      "before": "데이터 스캔 범위 안에 중요한 멤버 변수들이 포함되어 있음.",
+      "method_guide": "스캔 속도를 비정상적으로 높여 핵심 패킷을 발견하지 못하고 건너뛰는(Skip) 연산 에러를 발생시키세요.",
+      "after": "에러 발생. 중요한 가치 데이터가 인지 필터에 잡히지 않고 유실(Lost)되었습니다."
     },
-    "quiz_sentence": "They see money _______ed. Styled. Filtered.",
-    "script_ref": "Source 197",
-    "hint": "남에게 보여주기 위해 연출하거나 수행하는 메소드입니다.",
-    "translation": "그들은 돈이 연출되고, 스타일링되고, 필터링된 것을 봅니다.",
-    "pronunciation": "퍼포옴",
-    "logic_description": "시스템 로직: Social media makes everyone look like they are winning all the time. 상황 발생. 실제 데이터가 아닌, 필터를 거쳐 연출된 데이터만 네트워크에 배포되는 상황입니다. 이에 대응하여 `perform` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "When we measure too quickly, we ____ the best parts.",
+      "answer": "miss",
+      "distractors": [
+        "catch",
+        "measure",
+        "attach"
+      ]
+    },
+    "ipa": "/mɪs/"
   },
   {
     "id": 20,
-    "scenario": "Your phone has become a machine that makes you feel bad about yourself.",
-    "question": "연결 도구였던 객체가 타인과 나를 비교하여 고통을 주는 연산기로 변질되었습니다.",
-    "target": "Mobile phone",
-    "correct_method": "become",
-    "ipa": "/bɪˈkʌm/",
-    "delta": {
-      "before": "Connection tool [Status: Tool]",
-      "after": "Comparison machine [Status: Weapon]"
+    "method": "breathe",
+    "category": "Memory",
+    "logic_flow": {
+      "before": "감정 데이터가 고압으로 압축되어 시스템 메모리가 답답한 상태.",
+      "method_guide": "내부 버퍼를 비우고 가스 같은 감정 패킷을 외부로 방출(Flush)하여 시스템 압력을 해소하세요.",
+      "after": "패치 완료. 억눌렸던 메모리 공간이 순환(Circulated)되며 시스템 여유 공간이 확보되었습니다."
     },
-    "quiz_sentence": "The phone _______s a little comparison machine.",
-    "script_ref": "Source 200",
-    "hint": "성질이나 상태가 변화할 때 쓰는 기본 메소드입니다.",
-    "translation": "전화기는 작은 비교 기계가 됩니다.",
-    "pronunciation": "비컴",
-    "logic_description": "시스템 로직: Your phone has become a machine that makes you feel bad about yourself. 상황 발생. 연결 도구였던 객체가 타인과 나를 비교하여 고통을 주는 연산기로 변질되었습니다. 이에 대응하여 `become` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Maybe let that feeling _______ a little.",
+      "answer": "breathe",
+      "distractors": [
+        "choke",
+        "stifle",
+        "freeze"
+      ]
+    },
+    "ipa": "/briːð/"
   },
   {
     "id": 21,
-    "scenario": "Success is being described in a twisted and unhealthy way.",
-    "question": "성공의 정의(Definition) 데이터가 올바른 궤도를 벗어나 비틀려버렸습니다.",
-    "target": "Definition of success",
-    "correct_method": "distort",
-    "ipa": "/dɪˈstɔːrt/",
-    "delta": {
-      "before": "True meaning [Status: Straight]",
-      "after": "Twisted meaning [Status: Bent]"
+    "method": "untie",
+    "category": "Repair",
+    "logic_flow": {
+      "before": "자존감 노드가 외부 변수(수치)에 강력하게 커플링되어 시스템이 불안정한 상태.",
+      "method_guide": "데이터 간의 잘못된 종속성 루프를 끊고(Kill Dependency), 각 객체를 독립적인 메모리 세그먼트로 분리하세요.",
+      "after": "패치 완료. 외부 수치 변화에 영향을 받지 않는 독립적인(Independent) 자아 상태가 확보되었습니다."
     },
-    "quiz_sentence": "Maybe we're living with a ________ definition of success.",
-    "script_ref": "Source 204",
-    "hint": "형태를 비틀거나 왜곡하는 로직입니다.",
-    "translation": "어쩌면 우리는 왜곡된 성공의 정의와 함께 살고 있는지도 모릅니다.",
-    "pronunciation": "디스토트",
-    "logic_description": "시스템 로직: Success is being described in a twisted and unhealthy way. 상황 발생. 성공의 정의(Definition) 데이터가 올바른 궤도를 벗어나 비틀려버렸습니다. 이에 대응하여 `distort` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "You need to _____ your self-worth from that number.",
+      "answer": "untie",
+      "distractors": [
+        "tie",
+        "connect",
+        "attach"
+      ]
+    },
+    "ipa": "/ʌnˈtaɪ/"
   },
   {
     "id": 22,
-    "scenario": "You are running after a high salary without asking if you really want it.",
-    "question": "자신의 의사(Boolean) 확인 없이 외부 목표(돈)를 향해 무조건 달리는 루프 상태입니다.",
-    "target": "Career/Life goal",
-    "correct_method": "chase",
-    "ipa": "/tʃeɪs/",
-    "delta": {
-      "before": "Walking/Deciding [Status: Idle]",
-      "after": "Running after targets [Status: Hunting]"
+    "method": "get across",
+    "category": "Transfer",
+    "logic_flow": {
+      "before": "핵심 데이터 패킷이 발신 노드 내부에만 갇혀 있어 상대 노드에 도달하지 못함.",
+      "method_guide": "데이터를 이해의 장벽 너머로 가로질러(Across) 전송하여 상대방 수신 버퍼에 성공적으로 안착시키세요.",
+      "after": "패치 완료. 로컬 데이터가 네트워크를 가로질러 공유(Delivered/Understood) 상태로 전환되었습니다."
     },
-    "quiz_sentence": "They _____ titles, lifestyles, salaries, and symbols.",
-    "script_ref": "Source 212",
-    "hint": "목표를 쫓거나 추격하는 메소드입니다.",
-    "translation": "그들은 타이틀, 라이프스타일, 급여, 그리고 상징들을 쫓습니다.",
-    "pronunciation": "체이스",
-    "logic_description": "시스템 로직: You are running after a high salary without asking if you really want it. 상황 발생. 자신의 의사(Boolean) 확인 없이 외부 목표(돈)를 향해 무조건 달리는 루프 상태입니다. 이에 대응하여 `chase` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "It’s hard to ____ your point ______.",
+      "answer": "get across",
+      "distractors": [
+        "take in",
+        "bring up",
+        "set down"
+      ]
+    },
+    "ipa": "/ɡet əˈkrɔːs/"
   },
   {
     "id": 23,
-    "scenario": "A person looks ordinary, but they have deep wisdom inside.",
-    "question": "표면 데이터(Eye)만 봐서는 알 수 없는 숨겨진 대용량 데이터(Wisdom)가 존재하는 상황입니다.",
-    "target": "A person's depth",
-    "correct_method": "meet the eye",
-    "ipa": "/miːt ði aɪ/",
-    "delta": {
-      "before": "Surface level [Status: Visible]",
-      "after": "Deep level [Status: Hidden]"
+    "method": "nod",
+    "category": "Transfer",
+    "logic_flow": {
+      "before": "상대 노드로부터 데이터 패킷이 유입되었으나 수신 확인 신호가 없는 상태.",
+      "method_guide": "데이터를 성공적으로 수신했음을 알리는 '긍정 응답 신호(ACK)'를 가벼운 물리적 동작으로 네트워크에 배포하세요.",
+      "after": "패치 완료. 수신 확인(Acknowledged) 신호가 전달되어 세션이 안정적으로 유지됩니다."
     },
-    "quiz_sentence": "There is more to a person than ____s ___ ___.",
-    "script_ref": "Source 220",
-    "hint": "눈에 보이는 것 이상의 진실이 있을 때 쓰는 표현입니다.",
-    "translation": "사람에게는 눈에 보이는 것 이상의 무언가가 있습니다.",
-    "pronunciation": "미트 디 아이",
-    "logic_description": "시스템 로직: A person looks ordinary, but they have deep wisdom inside. 상황 발생. 표면 데이터(Eye)만 봐서는 알 수 없는 숨겨진 대용량 데이터(Wisdom)가 존재하는 상황입니다. 이에 대응하여 `meet the eye` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "A topic where people just ___ politely.",
+      "answer": "nod",
+      "distractors": [
+        "shout",
+        "doubt",
+        "ignore"
+      ]
+    },
+    "ipa": "/nɒd/"
   },
   {
     "id": 24,
-    "scenario": "The world doesn't see your quiet discipline and kindness.",
-    "question": "시스템이 객체의 내부 멤버 변수(친절, 훈련)를 스캔하지 못하고 지나쳐버리는 에러입니다.",
-    "target": "Inner qualities",
-    "correct_method": "miss",
-    "ipa": "/mɪs/",
-    "delta": {
-      "before": "Potential discovery [Status: Found]",
-      "after": "Failing to see [Status: Lost]"
+    "method": "reflect",
+    "category": "Process",
+    "logic_flow": {
+      "before": "외부 데이터 스트림이 유입되었으나 깊은 분석 없이 표면에 머물러 있음.",
+      "method_guide": "데이터를 즉시 출력하지 않고 재귀 루프를 돌려 시스템 내부에 비추어보는 '심층 분석(Deep Analysis)'을 수행하세요.",
+      "after": "패치 완료. 날것의 정보가 시스템 내부 연산을 거쳐 통찰(Processed Wisdom)로 승격되었습니다."
     },
-    "quiz_sentence": "When we measure people too quickly, we ____ the best parts of them.",
-    "script_ref": "Source 234",
-    "hint": "중요한 것을 놓치거나 보지 못하는 로직입니다.",
-    "translation": "사람들을 너무 빨리 측정할 때, 우리는 그들의 가장 좋은 부분들을 놓칩니다.",
-    "pronunciation": "미스",
-    "logic_description": "시스템 로직: The world doesn't see your quiet discipline and kindness. 상황 발생. 시스템이 객체의 내부 멤버 변수(친절, 훈련)를 스캔하지 못하고 지나쳐버리는 에러입니다. 이에 대응하여 `miss` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "You can use it to _______ more deeply.",
+      "answer": "reflect",
+      "distractors": [
+        "forget",
+        "absorb",
+        "react"
+      ]
+    },
+    "ipa": "/rɪˈflekt/"
   },
   {
     "id": 25,
-    "scenario": "You finally understand the name for the feeling you had.",
-    "question": "모호하게 떠다니던 데이터 스트림에 정확한 '이름(ID)'을 부여하여 인지하는 로직입니다.",
-    "target": "A feeling",
-    "correct_method": "name",
-    "ipa": "/neɪm/",
-    "delta": {
-      "before": "Unknown stream [Status: Anonymous]",
-      "after": "Identified feeling [Status: Labeled]"
+    "method": "deserve",
+    "category": "Process",
+    "logic_flow": {
+      "before": "특정 보상이나 존중 데이터가 대상 노드에 할당될지 미확정된 상태.",
+      "method_guide": "대상의 히스토리와 속성값을 체크하여 해당 리소스를 받을 정당한 '자격(Validation)'이 있는지 로직으로 판정하세요.",
+      "after": "패치 완료. 대상 노드가 해당 가치를 받을 권한(Entitled)이 있음을 시스템이 승인했습니다."
     },
-    "quiz_sentence": "It becomes easier to ____ it.",
-    "script_ref": "Source 318",
-    "hint": "이름을 짓거나 명명하는 메소드입니다.",
-    "translation": " 그것의 이름을 부르는 것이 더 쉬워집니다.",
-    "pronunciation": "네임",
-    "logic_description": "시스템 로직: You finally understand the name for the feeling you had. 상황 발생. 모호하게 떠다니던 데이터 스트림에 정확한 '이름(ID)'을 부여하여 인지하는 로직입니다. 이에 대응하여 `name` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Proof that you _______ respect.",
+      "answer": "deserve",
+      "distractors": [
+        "avoid",
+        "need",
+        "give"
+      ]
+    },
+    "ipa": "/dɪˈzɜːrv/"
   },
   {
     "id": 26,
-    "scenario": "Your heart starts to recover from the pain of money pressure.",
-    "question": "손상된 마음 시스템의 에러를 수정하고 다시 안정(Peace) 상태로 패치하는 로직입니다.",
-    "target": "Damaged heart",
-    "correct_method": "heal",
-    "ipa": "/hiːl/",
-    "delta": {
-      "before": "Status: Broken [Pain]",
-      "after": "Status: Restored [Peace]"
+    "method": "launch",
+    "category": "Transfer",
+    "logic_flow": {
+      "before": "개발 서버(내부)에 머물러 있는 프로젝트 객체가 대기 중임.",
+      "method_guide": "로컬 환경에서 준비된 객체를 실제 운영 서버(Public Market)로 강력하게 배포(Deploy)하여 구동시키세요.",
+      "after": "패치 완료. 비공개 상태였던 서비스가 활성(Live) 상태로 전환되어 외부 접근이 가능해졌습니다."
     },
-    "quiz_sentence": "Maybe even easier to ____ from it.",
-    "script_ref": "Source 319",
-    "hint": "상처를 낫게 하거나 치유하는 복구 메소드입니다.",
-    "translation": "그것으로부터 치유되는 것이 어쩌면 더 쉬울지도 모릅니다.",
-    "pronunciation": "힐",
-    "logic_description": "시스템 로직: Your heart starts to recover from the pain of money pressure. 상황 발생. 손상된 마음 시스템의 에러를 수정하고 다시 안정(Peace) 상태로 패치하는 로직입니다. 이에 대응하여 `heal` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Someone your age _______ed a business.",
+      "answer": "launch",
+      "distractors": [
+        "finished",
+        "carried",
+        "dropped"
+      ]
+    },
+    "ipa": "/lɔːntʃ/"
   },
   {
     "id": 27,
-    "scenario": "You stop giving money the power to judge your life.",
-    "question": "외부 객체(돈)에게 부여했던 관리자 권한(Judge Power)을 회수하여 폐기하는 로직입니다.",
-    "target": "Money's power",
-    "correct_method": "stop",
-    "ipa": "/stɑːp/",
-    "delta": {
-      "before": "Power Active [Status: Allowed]",
-      "after": "Power Disabled [Status: Restricted]"
+    "method": "hang",
+    "category": "Memory",
+    "logic_flow": {
+      "before": "시스템 코어(마음)가 안정적으로 접지(Grounded)되어 있는 상태.",
+      "method_guide": "코어의 운명을 특정 외부 수치 지점에 걸어두어, 외부 변동에 따라 흔들리는 '불안정 서스펜션(Suspension)' 상태로 만드세요.",
+      "after": "에러 발생. 시스템 안정성이 외부 변수에 매달려 위태로운(Vulnerable) 상태로 변경되었습니다."
     },
-    "quiz_sentence": "Once we ____ treating money as the final proof...",
-    "script_ref": "Source 218",
-    "hint": "진행 중인 동작이나 권한을 중단시키는 메소드입니다.",
-    "translation": "일단 우리가 돈을 최종적인 증거로 취급하는 것을 멈추면...",
-    "pronunciation": "스탑",
-    "logic_description": "시스템 로직: You stop giving money the power to judge your life. 상황 발생. 외부 객체(돈)에게 부여했던 관리자 권한(Judge Power)을 회수하여 폐기하는 로직입니다. 이에 대응하여 `stop` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "It's like ____ing your heart on a number.",
+      "answer": "hanging",
+      "distractors": [
+        "planting",
+        "dropping",
+        "throwing"
+      ]
+    },
+    "ipa": "/hæŋ/"
   },
   {
     "id": 28,
-    "scenario": "You decide to let your true feelings come out and breathe.",
-    "question": "억눌려있던 감정 데이터의 패킷을 외부로 방출하여 시스템 부하를 줄이는 환기 로직입니다.",
-    "target": "Internal feelings",
-    "correct_method": "breathe",
-    "ipa": "/briːð/",
-    "delta": {
-      "before": "Compressed [Status: Stuffy]",
-      "after": "Released [Status: Fresh]"
+    "method": "grab",
+    "category": "Process",
+    "logic_flow": {
+      "before": "여러 분석 경로가 있으나 CPU가 정밀 스캔 연산을 거부함.",
+      "method_guide": "가장 가까운 곳에 위치한 단순 데이터 패킷을 깊은 검증 없이 즉각 낚아채는 '퀵 페치(Quick Fetch)'를 실행하세요.",
+      "after": "패치 완료. 시스템이 최소 리소스로 눈앞의 데이터만 획득(Captured)하여 연산을 종료했습니다."
     },
-    "quiz_sentence": "Maybe let that feeling _______ a little.",
-    "script_ref": "Source 335",
-    "hint": "호흡하거나 공기를 통하게 하는 메소드입니다.",
-    "translation": "어쩌면 그 감정이 조금은 숨을 쉬게 내버려 두세요.",
-    "pronunciation": "브리드",
-    "logic_description": "시스템 로직: You decide to let your true feelings come out and breathe. 상황 발생. 억눌려있던 감정 데이터의 패킷을 외부로 방출하여 시스템 부하를 줄이는 환기 로직입니다. 이에 대응하여 `breathe` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "So people ____ the simplest proof.",
+      "answer": "grab",
+      "distractors": [
+        "miss",
+        "offer",
+        "reject"
+      ]
+    },
+    "ipa": "/ɡræb/"
   },
   {
     "id": 29,
-    "scenario": "You want to think about the episode's ideas in your own time.",
-    "question": "입력된 데이터를 RAM에만 두지 않고, 시간을 들여 심층 분석하고 저장하는 로직입니다.",
-    "target": "Episode ideas",
-    "correct_method": "reflect",
-    "ipa": "/rɪˈflekt/",
-    "delta": {
-      "before": "Raw data [Status: New]",
-      "after": "Processed wisdom [Status: Deep]"
+    "method": "trust",
+    "category": "Process",
+    "logic_flow": {
+      "before": "외부 노드로부터 오는 데이터를 방화벽(Firewall)이 상시 감시 중임.",
+      "method_guide": "대상의 무결성을 100% 신뢰하여 보안 가드를 해제하고 모든 데이터 패킷을 무검역으로 통과시키세요.",
+      "after": "패치 완료. 보안 프로토콜이 비활성화(Firewall OFF)되어 대상과의 무조건적 연결이 수립되었습니다."
     },
-    "quiz_sentence": "You can use it to _______ more deeply.",
-    "script_ref": "Source 337",
-    "hint": "깊이 반추하거나 되새겨보는 메소드입니다.",
-    "translation": "당신은 그것을 더 깊이 반추하기 위해 사용할 수 있습니다.",
-    "pronunciation": "리플렉트",
-    "logic_description": "시스템 로직: You want to think about the episode's ideas in your own time. 상황 발생. 입력된 데이터를 RAM에만 두지 않고, 시간을 들여 심층 분석하고 저장하는 로직입니다. 이에 대응하여 `reflect` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "They don't just admire wealth. They _____ it.",
+      "answer": "trust",
+      "distractors": [
+        "doubt",
+        "avoid",
+        "damage"
+      ]
+    },
+    "ipa": "/trʌst/"
   },
   {
     "id": 30,
-    "scenario": "Someone is poor but they live with great dignity and meaning.",
-    "question": "경제적 자산은 적지만, 내면에 '존엄'과 '의미'라는 고가치 데이터를 보유하고 있는 상태입니다.",
-    "target": "A person's life",
-    "correct_method": "live with",
-    "ipa": "/lɪv wɪð/",
-    "delta": {
-      "before": "Existing only [Status: Survival]",
-      "after": "Existing with value [Status: Dignified]"
+    "method": "turn into",
+    "category": "Repair",
+    "logic_flow": {
+      "before": "특정 데이터(의견)가 구식 타입(String)으로 존재함.",
+      "method_guide": "대상의 본질적 속성을 전혀 다른 고가치 형태(Gold)로 강제 변환하는 '매직 오버라이딩'을 시도하세요.",
+      "after": "패치 완료. 객체의 형태와 성질이 이전과 완전히 다른 규격으로 형변환(Converted)되었습니다."
     },
-    "quiz_sentence": "A person can earn less and still ____ ____ dignity.",
-    "script_ref": "Source 333",
-    "hint": "~와 함께 살아가다, 혹은 어떤 가치를 지닌 채 살다라는 뜻입니다.",
-    "translation": "사람은 적게 벌면서도 여전히 품위 있게 살 수 있습니다.",
-    "pronunciation": "리브 위드",
-    "logic_description": "시스템 로직: Someone is poor but they live with great dignity and meaning. 상황 발생. 경제적 자산은 적지만, 내면에 '존엄'과 '의미'라는 고가치 데이터를 보유하고 있는 상태입니다. 이에 대응하여 `live with` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Money does not magically ____ opinions ____ gold.",
+      "answer": "turn into",
+      "distractors": [
+        "stay in",
+        "keep as",
+        "look for"
+      ]
+    },
+    "ipa": "/tɜːrn ˈɪntuː/"
   },
   {
     "id": 31,
-    "scenario": "A difficult topic is mentioned, and everyone agrees without saying a word.",
-    "question": "민감한 주제가 나왔을 때, 말 대신 고개를 움직여 예의상 긍정의 신호를 보내는 로직입니다.",
-    "target": "Social atmosphere",
-    "correct_method": "nod",
-    "ipa": "/nɒd/",
-    "delta": {
-      "before": "Awkward silence [Status: Idle]",
-      "after": "Polite agreement [Status: Acknowledged]"
+    "method": "keep standing",
+    "category": "Memory",
+    "logic_flow": {
+      "before": "외부 압력(경제적 압박)으로 인해 시스템이 붕괴(Crash)될 위기에 처함.",
+      "method_guide": "시스템이 무너지지 않도록 수직 상태를 유지하며 지속적으로 지탱하는 '안정성 유지(Continuous Support)' 로직을 가동하세요.",
+      "after": "패치 완료. 외부 충격에도 불구하고 실생활 시스템이 다운되지 않고 정상 구동(Steady) 상태를 유지합니다."
     },
-    "quiz_sentence": "The kind of topic where people ___ politely.",
-    "script_ref": "Source 7",
-    "hint": "고개를 위아래로 끄덕이는 동작을 뜻하는 3글자 메소드입니다.",
-    "translation": "사람들이 정중하게 고개를 끄덕이는 그런 종류의 주제.",
-    "pronunciation": "나드",
-    "logic_description": "시스템 로직: A difficult topic is mentioned, and everyone agrees without saying a word. 상황 발생. 민감한 주제가 나왔을 때, 말 대신 고개를 움직여 예의상 긍정의 신호를 보내는 로직입니다. 이에 대응하여 `nod` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "The effort that _____s real life ________.",
+      "answer": "keeps standing",
+      "distractors": [
+        "lets fall",
+        "breaks down",
+        "moves away"
+      ]
+    },
+    "ipa": "/kiːp ˈstændɪŋ/"
   },
   {
     "id": 32,
-    "scenario": "A simple conversation suddenly makes you feel very emotional or sensitive.",
-    "question": "단순했던 대화 데이터가 갑자기 시스템의 예민한 부분(신경)에 접촉하여 자극을 주는 로직입니다.",
-    "target": "Emotional nerves",
-    "correct_method": "touch",
-    "ipa": "/tʌtʃ/",
-    "delta": {
-      "before": "Calm state [Status: Stable]",
-      "after": "Sensitive state [Status: Triggered]"
+    "method": "climb",
+    "category": "Process",
+    "logic_flow": {
+      "before": "시스템 계층 구조(Hierarchy)의 최하단 레벨에 위치함.",
+      "method_guide": "설계된 커리어 사다리를 따라 한 단계씩 '레벨 업(Increment Level)' 연산을 수행하며 위로 이동하세요.",
+      "after": "패치 완료. 객체의 위치값이 상위 계층(High Status)으로 갱신되었습니다."
     },
-    "quiz_sentence": "Suddenly starts ________ all kinds of nerves.",
-    "script_ref": "Source 5",
-    "hint": "손을 대거나 접촉하여 자극을 줄 때 사용하는 메소드입니다.",
-    "translation": "갑자기 온갖 종류의 신경을 건드리기 시작합니다.",
-    "pronunciation": "터치",
-    "logic_description": "시스템 로직: A simple conversation suddenly makes you feel very emotional or sensitive. 상황 발생. 단순했던 대화 데이터가 갑자기 시스템의 예민한 부분(신경)에 접촉하여 자극을 주는 로직입니다. 이에 대응하여 `touch` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "People start _____ing ladders they never chose.",
+      "answer": "climbing",
+      "distractors": [
+        "dropping",
+        "jumping",
+        "breaking"
+      ]
+    },
+    "ipa": "/klaɪm/"
   },
   {
     "id": 33,
-    "scenario": "You believe that a person is worthy of respect because they are human.",
-    "question": "어떤 객체가 특정 대우나 존중을 받을 정당한 '권리/자격'을 갖추고 있음을 판정하는 로직입니다.",
-    "target": "Respect and Value",
-    "correct_method": "deserve",
-    "ipa": "/dɪˈzɜːrv/",
-    "delta": {
-      "before": "Unproven value [Status: Unknown]",
-      "after": "Entitled value [Status: Qualified]"
+    "method": "meet the eye",
+    "category": "Repair",
+    "logic_flow": {
+      "before": "표면 UI(겉모습)만 스캔되어 내부 소스 코드의 깊이를 알 수 없는 상태.",
+      "method_guide": "단순 UI 스캔 이상의 데이터를 인지하여 숨겨진 핵심 로직(Core)을 검증(Validation) 하세요.",
+      "after": "패치 완료. 얕은 데이터 너머의 실제 소스(Deep Source)가 식별되어 시스템 로그에 출력되었습니다."
     },
-    "quiz_sentence": "Proof that you _______ respect.",
-    "script_ref": "Source 14",
-    "hint": "~할 가치가 있다, 혹은 마땅히 받아야 한다고 할 때 쓰입니다.",
-    "translation": "당신이 존중받을 자격이 있다는 증거.",
-    "pronunciation": "디저브",
-    "logic_description": "시스템 로직: You believe that a person is worthy of respect because they are human. 상황 발생. 어떤 객체가 특정 대우나 존중을 받을 정당한 '권리/자격'을 갖추고 있음을 판정하는 로직입니다. 이에 대응하여 `deserve` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "There is more to a person than ____s ___ ___.",
+      "answer": "meets the eye",
+      "distractors": [
+        "hits the ear",
+        "looks good",
+        "feels right"
+      ]
+    },
+    "ipa": "/miːt ði aɪ/"
   },
   {
     "id": 34,
-    "scenario": "People believe rich people are more reliable and honest just because of their money.",
-    "question": "상대의 자산(Wealth) 데이터를 보고 그 사람의 신뢰성(Reliability)을 무조건적으로 승인하는 로직입니다.",
-    "target": "Rich people",
-    "correct_method": "trust",
-    "ipa": "/trʌst/",
-    "delta": {
-      "before": "Neutral evaluation [Status: Neutral]",
-      "after": "High reliability [Status: Trusted]"
+    "method": "heal",
+    "category": "Repair",
+    "logic_flow": {
+      "before": "과거의 에러(상처)로 인해 특정 메모리 섹션이 파손(Corrupted)된 상태.",
+      "method_guide": "손상된 데이터를 수선하고 시스템을 이전의 정상적인 건강한 상태로 복구(Self-Repair) 하세요.",
+      "after": "패치 완료. 에러 로그가 삭제되고 메모리 무결성(Integrity)이 회복되었습니다."
     },
-    "quiz_sentence": "Why do people seem to _____ rich people more?",
-    "script_ref": "Source 25",
-    "hint": "누군가를 믿고 신뢰할 때 호출하는 가장 기본 메소드입니다.",
-    "translation": "왜 사람들은 부자들을 더 신뢰하는 것처럼 보일까요?",
-    "pronunciation": "트러스트",
-    "logic_description": "시스템 로직: People believe rich people are more reliable and honest just because of their money. 상황 발생. 상대의 자산(Wealth) 데이터를 보고 그 사람의 신뢰성(Reliability)을 무조건적으로 승인하는 로직입니다. 이에 대응하여 `trust` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Maybe it's even easier to ____ from it.",
+      "answer": "heal",
+      "distractors": [
+        "hurt",
+        "damage",
+        "break"
+      ]
+    },
+    "ipa": "/hiːl/"
   },
   {
     "id": 35,
-    "scenario": "You improve your English skills by listening to meaningful conversations.",
-    "question": "시스템의 언어 라이브러리가 외부 입력을 통해 자연스럽게 용량이 확장되고 발전하는 로직입니다.",
-    "target": "English ability",
-    "correct_method": "grow",
-    "ipa": "/ɡroʊ/",
-    "delta": {
-      "before": "Current level [Size: 100MB]",
-      "after": "Advanced level [Size: 500MB]"
+    "method": "name",
+    "category": "Process",
+    "logic_flow": {
+      "before": "정의되지 않은 익명(Anonymous)의 감정 데이터 패킷이 유입됨.",
+      "method_guide": "모호한 객체에 고유한 '식별자(Label/ID)'를 부여하여 시스템이 명확히 참조할 수 있게 하세요.",
+      "after": "패치 완료. 익명 데이터가 이름표를 가진 'Identified Object'로 변환되어 관리가 용이해졌습니다."
     },
-    "quiz_sentence": "Let your English ____ naturally as you listen.",
-    "script_ref": "Source 43",
-    "hint": "성장하거나 자라날 때 사용하는 메소드입니다.",
-    "translation": "들으면서 당신의 영어가 자연스럽게 성장하게 하세요.",
-    "pronunciation": "그로",
-    "logic_description": "시스템 로직: You improve your English skills by listening to meaningful conversations. 상황 발생. 시스템의 언어 라이브러리가 외부 입력을 통해 자연스럽게 용량이 확장되고 발전하는 로직입니다. 이에 대응하여 `grow` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "It becomes easier to ____ it.",
+      "answer": "name",
+      "distractors": [
+        "hide",
+        "lose",
+        "miss"
+      ]
+    },
+    "ipa": "/neɪm/"
   },
   {
     "id": 36,
-    "scenario": "Jake wants to look deeply into new words and expressions.",
-    "question": "미지의 데이터 영역을 구석구석 조사하여 새로운 가치를 찾아내는 탐구 로직입니다.",
-    "target": "Expressions",
-    "correct_method": "explore",
-    "ipa": "/ɪkˈsplɔːr/",
-    "delta": {
-      "before": "Unknown area [Status: Hidden]",
-      "after": "Discovered area [Status: Analyzed]"
+    "method": "live with",
+    "category": "Memory",
+    "logic_flow": {
+      "before": "특정 가치(품격)가 일시적으로만 시스템에 머물러 있는 상태.",
+      "method_guide": "해당 가치를 시스템의 기본 '환경 변수(Environment Variable)'로 설정하여 런타임 내내 공존(Co-existence) 하세요.",
+      "after": "패치 완료. 특정 속성이 시스템 상시 모드로 설정되어 일상적인 구동 환경(Routine)에 반영되었습니다."
     },
-    "quiz_sentence": "We'll also _______ some powerful words.",
-    "script_ref": "Source 44",
-    "hint": "미지의 대륙을 탐험하거나 기능을 탐구할 때 쓰는 메소드입니다.",
-    "translation": "우리는 또한 몇몇 강력한 단어들을 탐구할 것입니다.",
-    "pronunciation": "익스플로어",
-    "logic_description": "시스템 로직: Jake wants to look deeply into new words and expressions. 상황 발생. 미지의 데이터 영역을 구석구석 조사하여 새로운 가치를 찾아내는 탐구 로직입니다. 이에 대응하여 `explore` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "You can earn less and still ____ ____ dignity.",
+      "answer": "live with",
+      "distractors": [
+        "buy with",
+        "run with",
+        "fight with"
+      ]
+    },
+    "ipa": "/lɪv wɪð/"
   },
   {
     "id": 37,
-    "scenario": "You are just trying to get through each day financially.",
-    "question": "시스템이 무너지지 않도록 최소한의 자원으로 현재의 생존 상태를 유지하는 로직입니다.",
-    "target": "Current life",
-    "correct_method": "survive",
-    "ipa": "/sərˈvaɪv/",
-    "delta": {
-      "before": "Risk of failure [Status: Critical]",
-      "after": "Continuous existence [Status: Alive]"
+    "method": "explore",
+    "category": "Process",
+    "logic_flow": {
+      "before": "정의되지 않은 미지의 데이터 디렉토리가 발견됨.",
+      "method_guide": "잠겨 있는 영역을 조사하고 새로운 라이브러리나 가치 패킷을 발굴하는 '디렉토리 스캔(Scan)'을 실행하세요.",
+      "after": "패치 완료. 미답사 영역의 데이터가 분석(Analyzed)되어 가용 리소스로 추가되었습니다."
     },
-    "quiz_sentence": "One day you're just trying to _______.",
-    "script_ref": "Source 65",
-    "hint": "어려운 상황에서 살아남거나 존속할 때 사용하는 메소드입니다.",
-    "translation": "어느 날 당신은 단지 살아남으려고 노력하고 있습니다.",
-    "pronunciation": "서바이브",
-    "logic_description": "시스템 로직: You are just trying to get through each day financially. 상황 발생. 시스템이 무너지지 않도록 최소한의 자원으로 현재의 생존 상태를 유지하는 로직입니다. 이에 대응하여 `survive` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "We'll also _______ some powerful words.",
+      "answer": "explore",
+      "distractors": [
+        "delete",
+        "close",
+        "hide"
+      ]
+    },
+    "ipa": "/ɪkˈsplɔːr/"
   },
   {
     "id": 38,
-    "scenario": "Someone your age has just started a new company.",
-    "question": "설계 단계에 있던 비즈니스 객체를 실제 시장(Market)에 배포하여 실행시키는 로직입니다.",
-    "target": "New business",
-    "correct_method": "launch",
-    "ipa": "/lɔːntʃ/",
-    "delta": {
-      "before": "Internal project [Status: Development]",
-      "after": "Public service [Status: Active]"
+    "method": "survive",
+    "category": "Memory",
+    "logic_flow": {
+      "before": "리소스 부족으로 인해 프로세스가 강제 종료(Termination)될 위기 상황.",
+      "method_guide": "최소한의 리소스로 현재의 프로세스 상태를 유지하며 '생존 신호(Keep Alive)'를 계속 보내세요.",
+      "after": "패치 완료. 가혹한 환경에서도 시스템이 셧다운되지 않고 구동 중(Alive) 상태를 보존합니다."
     },
-    "quiz_sentence": "Someone your age _______ed a business.",
-    "script_ref": "Source 66",
-    "hint": "우주선을 발사하거나 서비스를 시작할 때 쓰는 그 단어입니다.",
-    "translation": "당신 나이대의 누군가가 사업을 시작했습니다.",
-    "pronunciation": "론치",
-    "logic_description": "시스템 로직: Someone your age has just started a new company. 상황 발생. 설계 단계에 있던 비즈니스 객체를 실제 시장(Market)에 배포하여 실행시키는 로직입니다. 이에 대응하여 `launch` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "One day you're just trying to _______.",
+      "answer": "survive",
+      "distractors": [
+        "succeed",
+        "thrive",
+        "arrive"
+      ]
+    },
+    "ipa": "/səˈvaɪv/"
   },
   {
     "id": 39,
-    "scenario": "You feel like your whole value as a human depends on a single number.",
-    "question": "자신의 마음을 위태롭게 특정 수치(Number)에 걸어두어 심리적으로 의존하는 로직입니다.",
-    "target": "Your heart",
-    "correct_method": "hang",
-    "ipa": "/hæŋ/",
-    "delta": {
-      "before": "Independent state [Status: Stable]",
-      "after": "Dangling state [Status: Precarious]"
+    "method": "be superficial",
+    "category": "Repair",
+    "logic_flow": {
+      "before": "객체의 깊은 내부 데이터를 정밀 분석해야 하는 상황.",
+      "method_guide": "핵심 로직을 무시하고 오직 표면 패킷(Metadata)만 처리하는 '얕은 스캔 에러(Shallow Scan)' 상태를 유지하세요.",
+      "after": "에러 발생. 데이터의 본질을 놓치고 껍데기 정보만 처리하는 저효율 상태로 렌더링됩니다."
     },
-    "quiz_sentence": "It's like ____ing your heart on a number.",
-    "script_ref": "Source 88",
-    "hint": "옷을 걸거나 무언가를 매달 때 사용하는 메소드입니다.",
-    "translation": "그것은 마치 당신의 마음을 숫자에 매달아 놓는 것과 같습니다.",
-    "pronunciation": "행",
-    "logic_description": "시스템 로직: You feel like your whole value as a human depends on a single number. 상황 발생. 자신의 마음을 위태롭게 특정 수치(Number)에 걸어두어 심리적으로 의존하는 로직입니다. 이에 대응하여 `hang` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "That way of thinking is very ___________.",
+      "answer": "superficial",
+      "distractors": [
+        "deep",
+        "honest",
+        "logical"
+      ]
+    },
+    "ipa": "/bi ˌsuːpəˈfɪʃl/"
   },
   {
     "id": 40,
-    "scenario": "Society picks the easiest way (money) to prove someone is successful.",
-    "question": "복잡한 분석 대신, 눈앞의 가장 단순한 증거(돈)를 낚아채서 결론을 내버리는 성급한 로직입니다.",
-    "target": "Simple proof",
-    "correct_method": "grab",
-    "ipa": "/ɡræb/",
-    "delta": {
-      "before": "Searching for truth [Status: Busy]",
-      "after": "Easy conclusion [Status: LazyDone]"
+    "method": "assign",
+    "category": "Process",
+    "logic_flow": {
+      "before": "내 가치(Worth)라는 변수가 비어 있거나(Null) 외부 값으로 오염된 상태.",
+      "method_guide": "변수에 세상의 평가 대신 내가 정의한 고유한 가치값을 명시적으로 '할당(Allocate)' 하세요.",
+      "after": "패치 완료. 빈 변수에 유의미한 가치 데이터가 저장되어 'Valued' 상태로 확정되었습니다."
     },
-    "quiz_sentence": "So people ____ the simplest proof.",
-    "script_ref": "Source 113",
-    "hint": "물건을 움켜쥐거나 기회를 낚아챌 때 쓰는 단어입니다.",
-    "translation": "그래서 사람들은 가장 단순한 증거를 낚아챕니다.",
-    "pronunciation": "그랩",
-    "logic_description": "시스템 로직: Society picks the easiest way (money) to prove someone is successful. 상황 발생. 복잡한 분석 대신, 눈앞의 가장 단순한 증거(돈)를 낚아채서 결론을 내버리는 성급한 로직입니다. 이에 대응하여 `grab` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "The worth they quietly ______ to their own hearts.",
+      "answer": "assign",
+      "distractors": [
+        "lose",
+        "give away",
+        "miss"
+      ]
+    },
+    "ipa": "/əˈsaɪn/"
   },
   {
     "id": 41,
-    "scenario": "Respect comes to you automatically because you have wealth and status.",
-    "question": "내가 노력하지 않아도 '지위(Prestige)' 데이터가 먼저 도착하여 존중의 분위기를 조성하는 로직입니다.",
-    "target": "Respect / Prestige",
-    "correct_method": "arrive",
-    "ipa": "/əˈraɪv/",
-    "delta": {
-      "before": "Neutral ground [Status: Empty]",
-      "after": "Respectful ground [Status: Occupied]"
+    "method": "separate",
+    "category": "Repair",
+    "logic_flow": {
+      "before": "서로 엉켜서 간섭(Interference)을 일으키는 두 데이터 노드가 식별됨.",
+      "method_guide": "데이터 무결성을 위해 두 노드를 강제로 분리하여 독립된 세그먼트(Segment)로 격리하세요.",
+      "after": "패치 완료. 데이터 간의 경계가 명확해져서 혼선 없이 개별 참조가 가능합니다."
     },
-    "quiz_sentence": "That polished kind of respect that ______s before the person.",
-    "script_ref": "Source 134",
-    "hint": "도착하다, 도달하다라는 뜻의 기본 메소드입니다.",
-    "translation": "그 사람보다 먼저 도착하는 그 세련된 종류의 존중.",
-    "pronunciation": "어라이브",
-    "logic_description": "시스템 로직: Respect comes to you automatically because you have wealth and status. 상황 발생. 내가 노력하지 않아도 '지위(Prestige)' 데이터가 먼저 도착하여 존중의 분위기를 조성하는 로직입니다. 이에 대응하여 `arrive` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "It’s vital to ________ your worth from your wealth.",
+      "answer": "separate",
+      "distractors": [
+        "combine",
+        "mix",
+        "attach"
+      ]
+    },
+    "ipa": "/ˈsepəreɪt/"
   },
   {
     "id": 42,
-    "scenario": "A competent person knows how to do their work well.",
-    "question": "주어진 임무나 상황을 효과적으로 처리하고 조절하는 능력치를 실행하는 로직입니다.",
-    "target": "Tasks / Situations",
-    "correct_method": "handle",
-    "ipa": "/ˈhændl/",
-    "delta": {
-      "before": "Unmanaged task [Status: Messy]",
-      "after": "Managed task [Status: Solved]"
+    "method": "acknowledge",
+    "category": "Transfer",
+    "logic_flow": {
+      "before": "입력된 데이터 패킷의 존재가 시스템 로그에 기록되지 않은 상태.",
+      "method_guide": "데이터의 존재를 공식적으로 승인하고, 수신 확인 로그를 생성하는 '정식 인지(Recognize)' 로직을 실행하세요.",
+      "after": "패치 완료. 대상의 가치가 시스템에 유효한 데이터로 공식 등록(Validated) 되었습니다."
     },
-    "quiz_sentence": "The ability to do something well and ______ it effectively.",
-    "script_ref": "Source 136",
-    "hint": "자동차의 핸들처럼 상황을 조종하거나 처리하는 단어입니다.",
-    "translation": "무언가를 잘하고 그것을 효과적으로 다루는 능력.",
-    "pronunciation": "핸들",
-    "logic_description": "시스템 로직: A competent person knows how to do their work well. 상황 발생. 주어진 임무나 상황을 효과적으로 처리하고 조절하는 능력치를 실행하는 로직입니다. 이에 대응하여 `handle` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "We must ___________ the value in their work.",
+      "answer": "acknowledge",
+      "distractors": [
+        "ignore",
+        "delete",
+        "forget"
+      ]
+    },
+    "ipa": "/əkˈnɒlɪdʒ/"
   },
   {
     "id": 43,
-    "scenario": "People think money can magically make their bad opinions look good.",
-    "question": "일반적인 데이터(Opinion)를 '황금' 같은 가치로 강제 형변환 시키려는 마법 같은 로직입니다.",
-    "target": "Opinions",
-    "correct_method": "turn into",
-    "ipa": "/tɜːrn ˈɪntuː/",
-    "delta": {
-      "before": "Ordinary opinion [Type: String]",
-      "after": "Golden wisdom [Type: Valuable]"
+    "method": "share",
+    "category": "Transfer",
+    "logic_flow": {
+      "before": "중요한 통찰(Insight) 데이터가 로컬 메모리에만 잠겨(Locked) 있음.",
+      "method_guide": "데이터의 접근 권한을 개방하고, 다수의 외부 노드가 접근할 수 있도록 '브로드캐스트(Broadcast)'를 수행하세요.",
+      "after": "패치 완료. 데이터가 네트워크에 공유되어 다수의 노드와 동기화(Shared) 되었습니다."
     },
-    "quiz_sentence": "Money does not magically ____ all opinions ____ gold.",
-    "script_ref": "Source 139",
-    "hint": "A가 B로 변하거나 바뀌게 할 때 사용하는 표현입니다.",
-    "translation": "돈이 마법처럼 모든 의견을 황금으로 비틀어 놓지는 않습니다.",
-    "pronunciation": "턴 인투",
-    "logic_description": "시스템 로직: People think money can magically make their bad opinions look good. 상황 발생. 일반적인 데이터(Opinion)를 '황금' 같은 가치로 강제 형변환 시키려는 마법 같은 로직입니다. 이에 대응하여 `turn into` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "I want to _____ these ideas with you.",
+      "answer": "share",
+      "distractors": [
+        "hide",
+        "keep",
+        "lock"
+      ]
+    },
+    "ipa": "/ʃeə(r)/"
   },
   {
     "id": 44,
-    "scenario": "You disagree with a message in your mind, but you still feel hurt by it.",
-    "question": "머리로는 거부하지만, 외부의 부정적 메시지를 마음속 깊이 받아들여 내면화하는 로직입니다.",
-    "target": "Message / Heart",
-    "correct_method": "absorb",
-    "ipa": "/əbˈzɔːrb/",
-    "delta": {
-      "before": "External pressure [Status: Shielded]",
-      "after": "Internalized wound [Status: Absorbed]"
+    "method": "keep in mind",
+    "category": "Memory",
+    "logic_flow": {
+      "before": "중요한 로직이 하위 메모리에 있어 휘발(Loss)될 위험이 있는 상태.",
+      "method_guide": "데이터를 L1 캐시나 상위 메모리에 상주시피 유지하여 런타임 내내 잊지 않도록 '백그라운드 유지(Persistence)'를 가동하세요.",
+      "after": "패치 완료. 핵심 데이터가 캐싱(Cached)되어 연산 시 즉각 참조 가능한 상태로 보존됩니다."
     },
-    "quiz_sentence": "People start ________ that message.",
-    "script_ref": "Source 148",
-    "hint": "스폰지가 액체를 흡수하듯 빨아들이는 메소드입니다.",
-    "translation": "사람들은 그 메시지를 흡수하기 시작합니다.",
-    "pronunciation": "업조브",
-    "logic_description": "시스템 로직: You disagree with a message in your mind, but you still feel hurt by it. 상황 발생. 머리로는 거부하지만, 외부의 부정적 메시지를 마음속 깊이 받아들여 내면화하는 로직입니다. 이에 대응하여 `absorb` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Please ____ __ ____ that you are more than a number.",
+      "answer": "keep in mind",
+      "distractors": [
+        "forget about",
+        "put aside",
+        "let go"
+      ]
+    },
+    "ipa": "/kiːp ɪn maɪnd/"
   },
   {
     "id": 45,
-    "scenario": "Slowly, the social message about money hurts the way you see yourself.",
-    "question": "반복적인 부정적 압박으로 인해 시스템의 '자아 인식' 데이터를 파손시키는 공격 로직입니다.",
-    "target": "Self-perception",
-    "correct_method": "damage",
-    "ipa": "/ˈdæmɪdʒ/",
-    "delta": {
-      "before": "Healthy self-image [Status: Perfect]",
-      "after": "Broken self-image [Status: Damaged]"
+    "method": "redefine",
+    "category": "Repair",
+    "logic_flow": {
+      "before": "낡고 왜곡된 데이터 스키마(Schema)가 시스템 전체에 깔려 있음.",
+      "method_guide": "기존의 잘못된 정의를 삭제하고, 새로운 올바른 논리 규격으로 데이터를 '덮어쓰기(Overwrite)' 하세요.",
+      "after": "패치 완료. 데이터 구조가 재정립되어 시스템의 판단 기준이 명확해졌습니다."
     },
-    "quiz_sentence": "That can slowly ______ a person's self-perception.",
-    "script_ref": "Source 151",
-    "hint": "피해를 주거나 손상시킬 때 사용하는 단어입니다.",
-    "translation": "그것은 한 사람의 자아 인식을 천천히 손상시킬 수 있습니다.",
-    "pronunciation": "대미지",
-    "logic_description": "시스템 로직: Slowly, the social message about money hurts the way you see yourself. 상황 발생. 반복적인 부정적 압박으로 인해 시스템의 '자아 인식' 데이터를 파손시키는 공격 로직입니다. 이에 대응하여 `damage` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "It’s time to ________ success for ourselves.",
+      "answer": "redefine",
+      "distractors": [
+        "follow",
+        "copy",
+        "repeat"
+      ]
+    },
+    "ipa": "/ˌriːdɪˈfaɪn/"
   },
   {
     "id": 46,
-    "scenario": "Hard work from nurses and teachers keeps real life stable.",
-    "question": "드러나지 않는 숨은 노력으로 현실 시스템이 무너지지 않도록 지탱하고 유지하는 로직입니다.",
-    "target": "Real life",
-    "correct_method": "keep standing",
-    "ipa": "/kiːp ˈstændɪŋ/",
-    "delta": {
-      "before": "Potential collapse [Status: Unstable]",
-      "after": "Stable existence [Status: Steady]"
+    "method": "value",
+    "category": "Process",
+    "logic_flow": {
+      "before": "특정 데이터의 가중치(Weight)가 기본값(Default)으로 설정되어 있음.",
+      "method_guide": "해당 객체의 우선순위 속성을 최고 레벨로 상향 조정하여 시스템 리소스를 집중 할당하세요.",
+      "after": "패치 완료. 대상 데이터가 고가치(High-Priority) 자산으로 재분류되어 처리됩니다."
     },
-    "quiz_sentence": "The kind of effort that _____s real life ________.",
-    "script_ref": "Source 169",
-    "hint": "쓰러지지 않게 계속 서 있게 유지한다는 뜻입니다.",
-    "translation": "실제 삶을 유지시키는 그런 종류의 노력.",
-    "pronunciation": "킵 스탠딩",
-    "logic_description": "시스템 로직: Hard work from nurses and teachers keeps real life stable. 상황 발생. 드러나지 않는 숨은 노력으로 현실 시스템이 무너지지 않도록 지탱하고 유지하는 로직입니다. 이에 대응하여 `keep standing` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "We should _____ people for who they are.",
+      "answer": "value",
+      "distractors": [
+        "ignore",
+        "price",
+        "underrate"
+      ]
+    },
+    "ipa": "/ˈvæljuː/"
   },
   {
     "id": 47,
-    "scenario": "On social media, people show their wealth like it's a performance.",
-    "question": "개인적인 자산을 공공의 네트워크상에서 하나의 쇼(Show)처럼 시연하고 연출하는 로직입니다.",
-    "target": "Money / Lifestyle",
-    "correct_method": "perform",
-    "ipa": "/pərˈfɔːrm/",
-    "delta": {
-      "before": "Private asset [Status: Private]",
-      "after": "Public show [Status: Performed]"
+    "method": "focus on",
+    "category": "Process",
+    "logic_flow": {
+      "before": "CPU 리소스가 여러 노이즈 데이터에 분산되어 연산 효율이 낮은 상태.",
+      "method_guide": "기타 잡음 패킷을 필터링하고 특정 타겟 데이터의 연산에만 전력을 집중하는 '리소스 락(Resource Lock)'을 실행하세요.",
+      "after": "패치 완료. 시스템 자원이 특정 작업에 집중(Concentrated)되어 처리 속도가 최적화되었습니다."
     },
-    "quiz_sentence": "People don't just see money now. They see money _______ed.",
-    "script_ref": "Source 197",
-    "hint": "공연을 하거나 역할을 수행할 때 사용하는 메소드입니다.",
-    "translation": "사람들은 이제 단지 돈을 보는 것이 아닙니다. 그들은 연출된 돈을 봅니다.",
-    "pronunciation": "퍼포옴",
-    "logic_description": "시스템 로직: On social media, people show their wealth like it's a performance. 상황 발생. 개인적인 자산을 공공의 네트워크상에서 하나의 쇼(Show)처럼 시연하고 연출하는 로직입니다. 이에 대응하여 `perform` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "Let's _____ __ what really matters.",
+      "answer": "focus on",
+      "distractors": [
+        "distract from",
+        "look away",
+        "spread out"
+      ]
+    },
+    "ipa": "/ˈfəʊkəs ɒn/"
   },
   {
     "id": 48,
-    "scenario": "You are trying to get higher titles and more money just because society says so.",
-    "question": "자신의 의지와 상관없이 타인이 정해놓은 '사다리(Ladders)'를 타고 올라가는 루프 로직입니다.",
-    "target": "Career ladders",
-    "correct_method": "climb",
-    "ipa": "/klaɪm/",
-    "delta": {
-      "before": "Ground level [Level: 0]",
-      "after": "High status [Level: 99]"
+    "method": "provide",
+    "category": "Transfer",
+    "logic_flow": {
+      "before": "대상 노드가 구동에 필요한 필수 리소스(가치/지원)를 상실한 상태.",
+      "method_guide": "시스템 라이브러리에서 필요한 자원을 인스턴스화하여 대상 노드에 '서플라이(Supply/Offer)' 하세요.",
+      "after": "패치 완료. 대상 노드에 필수 리소스가 공급되어 시스템 구동이 가능해졌습니다."
     },
-    "quiz_sentence": "People start _____ing ladders they never even chose.",
-    "script_ref": "Source 210",
-    "hint": "산이나 사다리를 기어오를 때 사용하는 단어입니다.",
-    "translation": "사람들은 자신이 선택하지도 않은 사다리를 오르기 시작합니다.",
-    "pronunciation": "클라임",
-    "logic_description": "시스템 로직: You are trying to get higher titles and more money just because society says so. 상황 발생. 자신의 의지와 상관없이 타인이 정해놓은 '사다리(Ladders)'를 타고 올라가는 루프 로직입니다. 이에 대응하여 `climb` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "They _______ something more than just money.",
+      "answer": "provide",
+      "distractors": [
+        "take",
+        "steal",
+        "lack"
+      ]
+    },
+    "ipa": "/prəˈvaɪd/"
   },
   {
     "id": 49,
-    "scenario": "When you judge people too fast, you don't see their quiet kindness.",
-    "question": "성급한 스캔 로직으로 인해 객체가 가진 가장 소중한 멤버 변수들을 발견하지 못하고 넘기는 에러입니다.",
-    "target": "Best parts of a person",
-    "correct_method": "miss",
-    "ipa": "/mɪs/",
-    "delta": {
-      "before": "Potential connection [Status: Ready]",
-      "after": "Lost connection [Status: Missed]"
+    "method": "embrace",
+    "category": "Process",
+    "logic_flow": {
+      "before": "새로운 데이터 패킷이나 변화(Error/Change)에 대해 시스템이 거부 반응을 보임.",
+      "method_guide": "데이터를 격리하지 않고 시스템의 일부로 부드럽게 통합(Integrate)하여 완전 수용 모드를 가동하세요.",
+      "after": "패치 완료. 새로운 상태가 시스템 프레임워크 내에 완전히 통합(Accepted)되었습니다."
     },
-    "quiz_sentence": "When we measure people too quickly, we ____ the best parts of them.",
-    "script_ref": "Source 234",
-    "hint": "기차를 놓치거나 중요한 것을 보지 못할 때 쓰는 메소드입니다.",
-    "translation": "사람들을 너무 빨리 측정할 때, 우리는 그들의 가장 좋은 부분들을 놓칩니다.",
-    "pronunciation": "미스",
-    "logic_description": "시스템 로직: When you judge people too fast, you don't see their quiet kindness. 상황 발생. 성급한 스캔 로직으로 인해 객체가 가진 가장 소중한 멤버 변수들을 발견하지 못하고 넘기는 에러입니다. 이에 대응하여 `miss` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "We need to _______ our own path.",
+      "answer": "embrace",
+      "distractors": [
+        "reject",
+        "fear",
+        "avoid"
+      ]
+    },
+    "ipa": "/ɪmˈbreɪs/"
   },
   {
     "id": 50,
-    "scenario": "You decide what your own heart is worth, instead of listening to the world.",
-    "question": "외부 시스템의 평가 대신, 시스템 소유자가 직접 자신의 내면에 가치 데이터를 부여하는 로직입니다.",
-    "target": "Your own heart",
-    "correct_method": "assign",
-    "ipa": "/əˈsaɪn/",
-    "delta": {
-      "before": "Undefined value [Status: Raw]",
-      "after": "Defined worth [Status: Valued]"
+    "method": "transform",
+    "category": "Process",
+    "logic_flow": {
+      "before": "기존의 하드코딩된 구식 사고 구조로 구동되는 시스템.",
+      "method_guide": "시스템 아키텍처 전체를 근본적으로 개선(Grand Refactoring)하여 더 높은 차원의 존재로 진화시키세요.",
+      "after": "패치 완료. 시스템의 전체 로직 구조가 완전히 뒤바뀌어 성능과 시야가 업그레이드되었습니다."
     },
-    "quiz_sentence": "What kind of worth they quietly ______ to their own hearts.",
-    "script_ref": "Source 321",
-    "hint": "특정 값이나 임무를 할당할 때 사용하는 메소드입니다.",
-    "translation": "그들이 자신의 마음속에 조용히 부여하는 어떤 종류의 가치.",
-    "pronunciation": "어사인",
-    "logic_description": "시스템 로직: You decide what your own heart is worth, instead of listening to the world. 상황 발생. 외부 시스템의 평가 대신, 시스템 소유자가 직접 자신의 내면에 가치 데이터를 부여하는 로직입니다. 이에 대응하여 `assign` 메소드를 실행합니다."
+    "quiz": {
+      "sentence": "It will _________ how you see the world.",
+      "answer": "transform",
+      "distractors": [
+        "keep",
+        "fix",
+        "damage"
+      ]
+    },
+    "ipa": "/trænsˈfɔːrm/"
   }
 ]
