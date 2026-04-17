@@ -1,132 +1,204 @@
 /**
- * Logic Master v7.0 Engine
- * Progress-based System Patch Learning
+ * Logic Master v7.5 - 3-Layer Architecture
+ * Layer 1: Console (Main)
+ * Layer 2: Inspector (Detail Overlay)
+ * Layer 3: Delta Visualizer (Result)
  */
 
 let allData = [];
-let currentIndex = 0; // JSON 배열의 인덱스 (0-49)
+let currentIndex = 0;
 
-const elements = {
+const el = {
+    // Console Layer
+    layerConsole: document.getElementById('layerConsole'),
     categoryBadge: document.getElementById('categoryBadge'),
     currentIndex: document.getElementById('currentIndex'),
     totalCount: document.getElementById('totalCount'),
-    beforeText: document.getElementById('beforeText'),
-    guideText: document.getElementById('guideText'),
-    quizSentence: document.getElementById('quizSentence'),
+    consoleScenario: document.getElementById('consoleScenario'),
+    consoleQuiz: document.getElementById('consoleQuiz'),
     optionsGrid: document.getElementById('optionsGrid'),
-    feedbackOverlay: document.getElementById('feedbackOverlay'),
-    afterText: document.getElementById('afterText'),
-    resultIpa: document.getElementById('resultIpa'),
-    nextBtn: document.getElementById('nextBtn'),
-    mainCard: document.querySelector('.main-card')
+    actionFooter: document.getElementById('actionFooter'),
+    btnInspect: document.getElementById('btnInspect'),
+    btnDeploy: document.getElementById('btnDeploy'),
+    
+    // Inspector Layer
+    layerInspector: document.getElementById('layerInspector'),
+    btnCloseInspector: document.getElementById('btnCloseInspector'),
+    inspectorMethod: document.getElementById('inspectorMethod'),
+    inspectorIpa: document.getElementById('inspectorIpa'),
+    inspectorNouns: document.getElementById('inspectorNouns'),
+    inspectorAdjs: document.getElementById('inspectorAdjs'),
+    inspectorTip: document.getElementById('inspectorTip'),
+
+    // Delta Layer
+    layerDelta: document.getElementById('layerDelta'),
+    deltaBefore: document.getElementById('deltaBefore'),
+    deltaCheck: document.getElementById('deltaCheck'),
+    deltaAfter: document.getElementById('deltaAfter'),
+    btnNext: document.getElementById('btnNext')
 };
 
-// 1. 초기 데이터 로드
 async function init() {
     try {
-        const res = await fetch('target.json');
+        const res = await fetch('LogicEngine_Data.json');
         allData = await res.json();
         
-        // 로컬스토리지에서 이진 진행 정보 로드 (저장된 ID가 없으면 1번부터)
+        // 로컬스토리지에서 진행률 복원
         const savedId = localStorage.getItem('lastLogicId');
         if (savedId) {
             currentIndex = allData.findIndex(item => item.id == savedId);
-            // 만약 찾지 못하거나 범위를 벗어나면 0으로 초기화
             if (currentIndex === -1) currentIndex = 0;
         }
 
-        renderQuiz();
+        setupEventListeners();
+        renderConsole();
     } catch (err) {
         console.error("Critical: Data Load Failed", err);
     }
 }
 
-// 2. 퀴즈 렌더링 루틴
-function renderQuiz() {
+function setupEventListeners() {
+    el.btnInspect.addEventListener('click', openInspector);
+    el.btnCloseInspector.addEventListener('click', closeInspector);
+    el.btnDeploy.addEventListener('click', transitionToDelta);
+    el.btnNext.addEventListener('click', loadNextScenario);
+}
+
+function renderConsole() {
     const item = allData[currentIndex];
     if (!item) return;
 
-    // UI 텍스트 업데이트
-    elements.categoryBadge.textContent = `SYSTEM SCAN: ${item.category}`;
-    elements.currentIndex.textContent = currentIndex + 1;
-    elements.totalCount.textContent = allData.length;
+    // Reset visibility state
+    el.layerConsole.classList.remove('hidden');
+    el.layerDelta.classList.add('hidden');
+    closeInspector();
     
-    elements.beforeText.textContent = item.logic_flow.before;
-    elements.guideText.textContent = item.logic_flow.method_guide;
-    
-    // 빈칸 처리: answer가 들어갈 자리를 _____로 표시 (데이터에 이미 포함되어 있을 가능성 높지만 보장)
-    elements.quizSentence.innerHTML = item.quiz.sentence.replace(/_{2,}/g, '<span style="color:var(--primary)">_____</span>');
+    el.optionsGrid.style.display = 'grid';
+    el.actionFooter.classList.add('hidden');
 
-    // 선택지 생성 (정답 + 오답 섞기)
+    // Populate Console Text
+    el.categoryBadge.textContent = `SYSTEM SCAN: ${item.category || item.layer || 'CORE'}`;
+    el.currentIndex.textContent = currentIndex + 1;
+    el.totalCount.textContent = allData.length;
+    
+    el.consoleScenario.textContent = item.logic_flow.before;
+    
+    // Format Quiz Sentence (replace underscores with a span)
+    const sentenceHtml = item.quiz.sentence.replace(
+        /_{2,}/g, 
+        '<span class="blank" id="quizBlank">_____</span>'
+    );
+    el.consoleQuiz.innerHTML = sentenceHtml;
+
+    // Generate Options
     const options = [item.quiz.answer, ...item.quiz.distractors];
     shuffleArray(options);
 
-    elements.optionsGrid.innerHTML = '';
+    el.optionsGrid.innerHTML = '';
     options.forEach(opt => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
-        btn.innerHTML = `<span>${opt}</span> <small>PATCH_CMD</small>`;
-        btn.onclick = () => checkAnswer(opt, item.quiz.answer);
-        elements.optionsGrid.appendChild(btn);
+        btn.innerHTML = `<span>${opt}</span> <small>CMD</small>`;
+        btn.onclick = () => handleOptionClick(btn, opt, item.quiz.answer);
+        el.optionsGrid.appendChild(btn);
     });
-
-    // 메인 카드 애니메이션 초기화
-    elements.mainCard.classList.remove('animate');
-    void elements.mainCard.offsetWidth; // reflow
-    elements.mainCard.classList.add('animate');
 }
 
-// 3. 정답 체크 및 로컬스토리지 저장
-function checkAnswer(selected, correct) {
-    const buttons = elements.optionsGrid.querySelectorAll('.option-btn');
+function handleOptionClick(btn, selected, correct) {
+    const allBtns = el.optionsGrid.querySelectorAll('.option-btn');
     
     if (selected === correct) {
-        // 정답 효과
-        buttons.forEach(btn => {
-            if (btn.innerText.includes(correct)) btn.classList.add('correct');
+        // Correct Action
+        allBtns.forEach(b => {
+            b.style.pointerEvents = 'none'; // disable clicks
+            if (b.innerText.includes(correct)) {
+                b.classList.add('correct');
+            }
         });
         
-        // 로컬스토리지에 현재 ID 저장 (이어서 공부하기용)
+        // Fill the blank
+        const blank = document.getElementById('quizBlank');
+        if (blank) {
+            blank.textContent = correct;
+            blank.classList.add('filled');
+        }
+
+        // Save Progress
         localStorage.setItem('lastLogicId', allData[currentIndex].id);
         
-        // 피드백 오버레이 표시
+        // Show next actions
         setTimeout(() => {
-            showFeedback();
+            el.optionsGrid.style.display = 'none';
+            el.actionFooter.classList.remove('hidden');
         }, 600);
+        
     } else {
-        // 오답 효과
-        buttons.forEach(btn => {
-            if (btn.innerText.includes(selected)) btn.classList.add('wrong');
-        });
-        // 햅틱/에러 느낌의 흔들림 효과 추가 가능
+        // Wrong Action
+        btn.classList.add('wrong');
+        setTimeout(() => btn.classList.remove('wrong'), 400);
     }
 }
 
-// 4. 결과 피드백 표시
-function showFeedback() {
+function openInspector() {
     const item = allData[currentIndex];
-    elements.afterText.textContent = item.logic_flow.after;
-    elements.resultIpa.textContent = item.ipa || '';
-    elements.feedbackOverlay.style.display = 'flex';
+    
+    el.inspectorMethod.textContent = item.method;
+    
+    // Some data might not have IPA mapping
+    if (item.ipa) {
+        el.inspectorIpa.style.display = 'inline';
+        el.inspectorIpa.textContent = item.ipa;
+    } else {
+        el.inspectorIpa.style.display = 'none';
+    }
+    
+    el.inspectorNouns.innerHTML = (item.extensions && item.extensions.nouns && item.extensions.nouns.length > 0)
+        ? item.extensions.nouns.map(n => `<span class="tag">${n.w} <small style="opacity:0.7">(${n.m})</small></span>`).join('')
+        : '<span class="tag">N/A</span>';
+        
+    el.inspectorAdjs.innerHTML = (item.extensions && item.extensions.adjectives && item.extensions.adjectives.length > 0)
+        ? item.extensions.adjectives.map(a => `<span class="tag">${a.w} <small style="opacity:0.7">(${a.m})</small></span>`).join('')
+        : '<span class="tag">N/A</span>';
+    
+    el.inspectorTip.textContent = item.tip || "No specific tips for this scenario.";
+    
+    el.layerInspector.classList.add('open');
 }
 
-// 5. 다음 문항 이동 또는 리셋
-elements.nextBtn.addEventListener('click', () => {
-    elements.feedbackOverlay.style.display = 'none';
+function closeInspector() {
+    el.layerInspector.classList.remove('open');
+}
+
+function transitionToDelta() {
+    const item = allData[currentIndex];
     
+    closeInspector();
+    
+    // Populate Delta Layer
+    el.deltaBefore.textContent = item.logic_flow.before;
+    el.deltaCheck.textContent = item.delta_check ? item.delta_check.result : "State modified";
+    el.deltaAfter.textContent = item.logic_flow.after;
+    
+    // Execute transition
+    el.layerConsole.classList.add('hidden');
+    
+    // Small delay to make it feel natural
+    setTimeout(() => {
+        el.layerDelta.classList.remove('hidden');
+    }, 200);
+}
+
+function loadNextScenario() {
     currentIndex++;
-    
-    // 마지막 번호까지 공부가 끝나면 다시 1번으로 복귀
     if (currentIndex >= allData.length) {
         currentIndex = 0;
         localStorage.setItem('lastLogicId', allData[0].id);
-        alert("CONGRATULATIONS: All patches deployed. System Rebooting to Index 1.");
+        alert("CONGRATULATIONS: All patches deployed. System Rebooting to SCENARIO 1.");
     }
-    
-    renderQuiz();
-});
+    renderConsole();
+}
 
-// 헬퍼: 배열 셔플
+// Utility: Array Shuffle
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -134,5 +206,5 @@ function shuffleArray(array) {
     }
 }
 
-// 엔진 가동
+// Start Engine
 init();

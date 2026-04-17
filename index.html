@@ -3,53 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logic Master v7.0 | System Patch Engine</title>
+    <title>MethodHunt | Logic Engine Interface</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
-        <!-- Header: Progress & Info -->
-        <header class="header">
-            <div class="status-badge" id="categoryBadge">SYSTEM SCANNING</div>
-            <div class="progress-info">INDEX: <span id="currentIndex">1</span> / <span id="totalCount">50</span></div>
-        </header>
+        <!-- Main Layer: The Console -->
+        <main class="layer layer-console" id="layerConsole">
+            <header class="header">
+                <div class="status-badge" id="categoryBadge">SYSTEM SCAN</div>
+                <div class="progress-info">SCENARIO: <span id="currentIndex">1</span> / <span id="totalCount">...</span></div>
+            </header>
 
-        <!-- Main Workspace -->
-        <main class="main-card animate">
-            <!-- Step 1: Scan (Before) -->
-            <section class="logic-section">
-                <span class="step-label">01. System Status Scan</span>
-                <p class="logic-text" id="beforeText">L1/L2 Cache 영역에 스쳐 지나가는 휘발성 질문 패킷들이 발생함.</p>
-            </section>
+            <div class="scenario-box">
+                <div class="label">ERROR_STATE / SCENARIO</div>
+                <p class="console-text" id="consoleScenario">...</p>
+            </div>
 
-            <!-- Step 2: Patch Logic (Guide) -->
-            <section class="logic-section">
-                <span class="step-label">02. Target Action: Patch Logic</span>
-                <div class="guide-box" id="guideText">데이터를 유실(Drop)하지 않고 시스템의 메인 메모리(RAM)에 상주시피 적재하여 '데이터 영속성(Persistence)'을 유지하세요.</div>
-            </section>
+            <div class="prompt-box">
+                <p>💡 이 에러 상황을 해결할 메소드명을 입력(선택)하세요.</p>
+            </div>
 
-            <!-- Step 3: Execution (Quiz) -->
-            <section class="quiz-section">
-                <span class="step-label">03. Execution: Method Dispatch</span>
-                <p class="sentence" id="quizSentence">Through the quiet questions people _____ in their hearts.</p>
-                <div class="options-grid" id="optionsGrid">
-                    <!-- Options buttons will be injected here -->
-                </div>
-            </section>
+            <div class="quiz-box">
+                <p class="sentence" id="consoleQuiz">...</p>
+            </div>
+
+            <div class="options-grid" id="optionsGrid">
+                <!-- Options injected here -->
+            </div>
+
+            <div class="action-footer hidden" id="actionFooter">
+                <button class="inspect-btn" id="btnInspect">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/></svg>
+                    OPEN INSPECTOR
+                </button>
+                <button class="deploy-btn" id="btnDeploy">INITIATE DELTA PATCH</button>
+            </div>
         </main>
 
-        <!-- Step 4: Result Overlay (Feedback) -->
-        <div class="feedback-overlay" id="feedbackOverlay">
-            <span class="step-label" style="color:var(--success)">04. Result: Delta Check</span>
-            <div id="resultIpa" style="color:var(--text-dim); font-size: 1.1rem; margin-top: 10px; font-style: italic;">/ipa/</div>
-            <div class="after-text" id="afterText">패치 완료. 질문 데이터가 휘발되지 않고 시스템 내부에 묵직하게 보존(Holding)됩니다.</div>
-            <button class="next-btn" id="nextBtn">DEPLOY NEXT PATCH</button>
+        <!-- Detail Layer: The Inspector (Slide up) -->
+        <aside class="layer-inspector" id="layerInspector">
+            <div class="inspector-handle"></div>
+            <div class="inspector-header">
+                <h3>LIBRARY INSPECTOR</h3>
+                <button class="close-btn" id="btnCloseInspector">&times;</button>
+            </div>
+            <div class="inspector-content">
+                <div class="method-header">
+                    <h2 class="method-title" id="inspectorMethod">method_name</h2>
+                    <span class="ipa-text" id="inspectorIpa">/ipa/</span>
+                </div>
+                <div class="inspector-section">
+                    <div class="label">COMPATIBLE NOUNS (Extensions)</div>
+                    <div class="tags-container" id="inspectorNouns"></div>
+                </div>
+                <div class="inspector-section">
+                    <div class="label">COMPATIBLE ADJECTIVES (Extensions)</div>
+                    <div class="tags-container" id="inspectorAdjs"></div>
+                </div>
+                <div class="inspector-section">
+                    <div class="label">DEVELOPER TIP</div>
+                    <p class="tip-text" id="inspectorTip"></p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Result Layer: Delta Visualizer -->
+        <div class="layer layer-delta hidden" id="layerDelta">
+            <div class="delta-header">
+                <h2>DELTA VISUALIZER</h2>
+                <p class="delta-sub">System state transformation confirmed.</p>
+            </div>
+            
+            <div class="delta-comparison">
+                <div class="delta-card before-state">
+                    <div class="label">BEFORE</div>
+                    <p id="deltaBefore"></p>
+                </div>
+                
+                <div class="delta-connector">
+                    <div class="delta-arrow">↓</div>
+                    <div class="delta-check-badge" id="deltaCheck">- Error -> + Resolved</div>
+                </div>
+
+                <div class="delta-card after-state">
+                    <div class="label">AFTER</div>
+                    <p id="deltaAfter"></p>
+                </div>
+            </div>
+
+            <div class="delta-footer">
+                <button class="next-btn" id="btnNext">LOAD NEXT SCENARIO</button>
+            </div>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=3"></script>
 </body>
 </html>
