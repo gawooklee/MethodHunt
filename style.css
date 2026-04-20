@@ -104,6 +104,25 @@ body {
     font-family: var(--font-mono);
 }
 
+.scenario-select {
+    background: var(--glass);
+    border: 1px solid var(--border);
+    color: var(--primary);
+    font-family: var(--font-mono);
+    padding: 4px 8px;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    max-width: 160px;
+}
+.scenario-select:focus {
+    border-color: var(--primary);
+}
+.scenario-select option {
+    background: var(--panel-bg);
+    color: var(--text-main);
+}
+
 .label {
     font-size: 0.75rem;
     color: var(--text-dim);

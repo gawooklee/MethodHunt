@@ -15,7 +15,12 @@
         <main class="layer layer-console" id="layerConsole">
             <header class="header">
                 <div class="status-badge" id="categoryBadge">SYSTEM SCAN</div>
-                <div class="progress-info">SCENARIO: <span id="currentIndex">1</span> / <span id="totalCount">...</span></div>
+                <div class="progress-info" style="display: flex; align-items: center; gap: 8px;">
+                    SCENARIO: 
+                    <select id="scenarioSelect" class="scenario-select" title="원하는 인덱스/단어로 바로 이동하세요"></select>
+                    <span style="display:none;" id="currentIndex">1</span>
+                    <span style="display:none;" id="totalCount">...</span>
+                </div>
             </header>
 
             <div class="scenario-box">

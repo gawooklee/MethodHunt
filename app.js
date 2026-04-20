@@ -12,6 +12,7 @@ const el = {
     // Console Layer
     layerConsole: document.getElementById('layerConsole'),
     categoryBadge: document.getElementById('categoryBadge'),
+    scenarioSelect: document.getElementById('scenarioSelect'),
     currentIndex: document.getElementById('currentIndex'),
     totalCount: document.getElementById('totalCount'),
     consoleScenario: document.getElementById('consoleScenario'),
@@ -50,11 +51,28 @@ async function init() {
             if (currentIndex === -1) currentIndex = 0;
         }
 
+        populateScenarioSelect();
         setupEventListeners();
         renderConsole();
     } catch (err) {
         console.error("Critical: Data Load Failed", err);
     }
+}
+
+function populateScenarioSelect() {
+    el.scenarioSelect.innerHTML = '';
+    allData.forEach((item, index) => {
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = `${index + 1}. ${item.method}`;
+        el.scenarioSelect.appendChild(option);
+    });
+    
+    el.scenarioSelect.addEventListener('change', (e) => {
+        currentIndex = parseInt(e.target.value, 10);
+        localStorage.setItem('lastLogicId', allData[currentIndex].id);
+        renderConsole();
+    });
 }
 
 function setupEventListeners() {
@@ -78,8 +96,9 @@ function renderConsole() {
 
     // Populate Console Text
     el.categoryBadge.textContent = `SYSTEM SCAN: ${item.category || item.layer || 'CORE'}`;
-    el.currentIndex.textContent = currentIndex + 1;
-    el.totalCount.textContent = allData.length;
+    if (el.scenarioSelect) el.scenarioSelect.value = currentIndex;
+    if (el.currentIndex) el.currentIndex.textContent = currentIndex + 1;
+    if (el.totalCount) el.totalCount.textContent = allData.length;
     
     el.consoleScenario.textContent = item.logic_flow.before;
     
