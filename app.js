@@ -13,6 +13,7 @@ const el = {
     layerConsole: document.getElementById('layerConsole'),
     categoryBadge: document.getElementById('categoryBadge'),
     scenarioSelect: document.getElementById('scenarioSelect'),
+    jumpInput: document.getElementById('jumpInput'),
     currentIndex: document.getElementById('currentIndex'),
     totalCount: document.getElementById('totalCount'),
     consoleScenario: document.getElementById('consoleScenario'),
@@ -51,7 +52,6 @@ async function init() {
             if (currentIndex === -1) currentIndex = 0;
         }
 
-        populateScenarioSelect();
         setupEventListeners();
         renderConsole();
     } catch (err) {
@@ -59,27 +59,23 @@ async function init() {
     }
 }
 
-function populateScenarioSelect() {
-    el.scenarioSelect.innerHTML = '';
-    allData.forEach((item, index) => {
-        const option = document.createElement('option');
-        option.value = index;
-        option.textContent = `${index + 1}. ${item.method}`;
-        el.scenarioSelect.appendChild(option);
-    });
-    
-    el.scenarioSelect.addEventListener('change', (e) => {
-        currentIndex = parseInt(e.target.value, 10);
-        localStorage.setItem('lastLogicId', allData[currentIndex].id);
-        renderConsole();
-    });
-}
-
 function setupEventListeners() {
     el.btnInspect.addEventListener('click', openInspector);
     el.btnCloseInspector.addEventListener('click', closeInspector);
     el.btnDeploy.addEventListener('click', transitionToDelta);
     el.btnNext.addEventListener('click', loadNextScenario);
+    el.jumpInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const val = parseInt(e.target.value, 10);
+            const targetIndex = allData.findIndex(item => item.id == val);
+            if (targetIndex !== -1) {
+                currentIndex = targetIndex;
+                localStorage.setItem('lastLogicId', allData[currentIndex].id);
+                renderConsole();
+                e.target.blur();
+            }
+        }
+    });
 }
 
 function renderConsole() {
@@ -96,7 +92,7 @@ function renderConsole() {
 
     // Populate Console Text
     el.categoryBadge.textContent = `SYSTEM SCAN: ${item.category || item.layer || 'CORE'}`;
-    if (el.scenarioSelect) el.scenarioSelect.value = currentIndex;
+    if (el.jumpInput) el.jumpInput.value = item.id;
     if (el.currentIndex) el.currentIndex.textContent = currentIndex + 1;
     if (el.totalCount) el.totalCount.textContent = allData.length;
     

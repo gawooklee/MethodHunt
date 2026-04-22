@@ -15,11 +15,14 @@
         <main class="layer layer-console" id="layerConsole">
             <header class="header">
                 <div class="status-badge" id="categoryBadge">SYSTEM SCAN</div>
-                <div class="progress-info" style="display: flex; align-items: center; gap: 8px;">
+                <div class="progress-info">
                     SCENARIO: 
-                    <select id="scenarioSelect" class="scenario-select" title="원하는 인덱스/단어로 바로 이동하세요"></select>
-                    <span style="display:none;" id="currentIndex">1</span>
-                    <span style="display:none;" id="totalCount">...</span>
+                    <div class="jump-box">
+                        <span class="prefix">#</span>
+                        <input type="number" id="jumpInput" class="jump-input" placeholder="000" min="1" title="시나리오 번호를 입력하고 Enter를 누르세요">
+                        <span class="total-divider">/</span>
+                        <span id="totalCount" class="total-count">...</span>
+                    </div>
                 </div>
             </header>
 
